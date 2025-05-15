@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.ArrayList;
 public class SistemaTransporte {
     ArrayList<Usuario> usuarios;
@@ -19,12 +20,22 @@ public class SistemaTransporte {
 
     }
     public void registrarUsuario(){
+        System.out.println("---------------------------------------------------");
+        System.out.println("señor usuario, por favor registrese en Fusarout con su nombre completo");
+        usuarios = Scanner.nextLine();
+
+        usuarios.replace(".",".");
+        usuarios.toLowerCase();
 
     }
     public void mostrarUsuario(){
+        System.out.println("----------------------------------------------------");
+        System.out.println("¡PERFECTO! De acuerdo con la informacion tu nombre es "+usuarios);
 
     }
     public void añadirDestinoFavorito(){
+        System.out.println("-------------------------------  ------------------");
+        System.out.println("¿deseas agregar tu destino favorito?");
 
     }
     public void mostrarDestinosUsarios(){
