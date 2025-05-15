@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public abstract class  Ruta {
     protected String nombreRuta;
-    protected ArrayList<String> paraderos;
     protected String horaInicio;
     protected String horaFin;
     protected ArrayList<Integer> calificacionesRutas;
@@ -14,9 +13,8 @@ public abstract class  Ruta {
 
 
     }
-    public Ruta(String nombreRuta, ArrayList<String>paraderos, String horaInicio, String horaFin, ArrayList<Integer> calificacionesRutas ){
+    public Ruta(String nombreRuta, String horaInicio, String horaFin, ArrayList<Integer> calificacionesRutas ){
         this.nombreRuta=nombreRuta;
-        this.paraderos=paraderos;
         this.horaInicio=horaInicio;
         this.horaFin=horaFin;
         this.calificacionesRutas=calificacionesRutas;
