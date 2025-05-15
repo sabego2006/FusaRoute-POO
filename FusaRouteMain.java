@@ -2,13 +2,11 @@ import java.util.Scanner;
 
 public class FusaRouteMain {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         SistemaTransporte sistema = new SistemaTransporte();
         sistema.inicializarRutasPredeterminadas();
 
-        Integer opcion;
 
-        do {
             System.out.println("\n====== SISTEMA DE RUTAS DE BUSETA - FUSAGASUGÁ ======");
             System.out.println("1. Registrar nuevo usuario");
             System.out.println("2. Ver usuarios registrados");
@@ -23,9 +21,8 @@ public class FusaRouteMain {
             System.out.println("0. Salir");
             System.out.println("=====================================================");
             System.out.print("Seleccione una opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine();
 
+            Integer opcion = (int) Double.parseDouble(teclado.next().trim().replace(",", "").replace(".", ""));
 //            switch (opcion) {
 //                case 1:
 //                    sistema.registrarUsuario(scanner);
@@ -64,13 +61,14 @@ public class FusaRouteMain {
 //                    System.out.println("Opción inválida. Intente de nuevo.");
 //            }
 
-        } while (opcion != 0);
+            //   } while (opcion != 0);
 
 
 //    }
 
+        }
     }
-}
+
 
 
 
