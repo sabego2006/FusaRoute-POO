@@ -7,30 +7,38 @@ public class Usuario {
     private String cedula;
     private Integer edad;
     private String barrioResidencia;
+    private String contraseña;
     ArrayList<String> destinosFrecuentes;
-
+//peo
     //Constructores
     public Usuario() {
     }
 
 
-    public Usuario(String nombre, String cedula, Integer edad, String barrioResidencia, ArrayList<String> destinosFrecuentes) {
+    public Usuario(String nombre, String cedula, Integer edad, String barrioResidencia,String contraseña, ArrayList<String> destinosFrecuentes) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.barrioResidencia = barrioResidencia;
         this.destinosFrecuentes = destinosFrecuentes;
+        this.contraseña=contraseña;
     }
     //Metodos
-    public void seleccionarDestino(String[] destinos, Integer indice){
-    if (indice >= 0 && indice < destinos.length) {
-        String destino = destinos[indice];
-        if (!destinosFrecuentes.contains(destino)) {
-
-        }
-
-    }
-
+//    public void seleccionarDestino(String[] destinos, Integer indice){
+//    if (indice >= 0 && indice < destinos.length) {
+//        String destino = destinos[indice];
+//        if (!destinosFrecuentes.contains(destino)) {
+//        }
+//    }
+//
+//    }
+    public void mostrarInfo(){
+        System.out.println("***** INFORMACIÓN USUARIO *****");
+        System.out.println("Nombre: " + Usuario.this.nombre);
+        System.out.println("Cedula: " + Usuario.this.cedula);
+        System.out.println("Edad: " + Usuario.this.edad);
+        System.out.println("Barrio de residencia: " + Usuario.this.barrioResidencia);
+        System.out.println("Destinos frecuentes: " + Usuario.this.destinosFrecuentes);
     }
 
     //Setter & Getter
@@ -73,6 +81,14 @@ public class Usuario {
     public void setDestinosFrecuentes(ArrayList<String> destinosFrecuentes) {
         this.destinosFrecuentes = destinosFrecuentes;
     }
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
 
 
 }
