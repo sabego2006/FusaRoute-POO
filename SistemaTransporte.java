@@ -6,8 +6,7 @@ public class SistemaTransporte {
     Integer cantidadRutas;
     ArrayList<String> rutas;
     public SistemaTransporte() {
-        rutas = new ArrayList<>();
-        cantidadRutas = 0;
+
     }
 
     public void inicializarRutasPredeterminadas() {
