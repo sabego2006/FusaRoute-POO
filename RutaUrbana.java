@@ -13,6 +13,7 @@ public class RutaUrbana extends Ruta {
         comunas.add("Oriental");
         comunas.add("Sur Occidente");
         comunas.add("Sur Oriente");
+
         for (int i=0; i<comunas.size(); i++){
             System.out.println((i+1)+": "+comunas.get(i));
         }

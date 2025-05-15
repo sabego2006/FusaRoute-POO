@@ -10,7 +10,7 @@ public class Administrador extends Usuario{
     }
 
     public void mostrarInfo(){
-        System.out.println("wiow");
+
     }
 
 }

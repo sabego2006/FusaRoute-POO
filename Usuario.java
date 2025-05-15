@@ -24,15 +24,21 @@ public class Usuario {
         this.contraseña=contraseña;
     }
     //Metodos
-    public void seleccionarDestino(String[] destinos, Integer indice){
-    if (indice >= 0 && indice < destinos.length) {
-        String destino = destinos[indice];
-        if (!destinosFrecuentes.contains(destino)) {
-
-        }
-
-    }
-
+//    public void seleccionarDestino(String[] destinos, Integer indice){
+//    if (indice >= 0 && indice < destinos.length) {
+//        String destino = destinos[indice];
+//        if (!destinosFrecuentes.contains(destino)) {
+//        }
+//    }
+//
+//    }
+    public void mostrarInfo(){
+        System.out.println("***** INFORMACIÓN USUARIO *****");
+        System.out.println("Nombre: " + Usuario.this.nombre);
+        System.out.println("Cedula: " + Usuario.this.cedula);
+        System.out.println("Edad: " + Usuario.this.edad);
+        System.out.println("Barrio de residencia: " + Usuario.this.barrioResidencia);
+        System.out.println("Destinos frecuentes: " + Usuario.this.destinosFrecuentes);
     }
 
     //Setter & Getter
