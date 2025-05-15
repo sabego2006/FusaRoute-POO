@@ -46,7 +46,11 @@ public class RutaUrbana extends Ruta {
         }
     }
     public void nombreBarrioComunaOccidental(){
-
+        barriosComunaOccidental.add("San Mateo");
+        barriosComunaOccidental.add("Manila");
+        barriosComunaOccidental.add("convoy");
+        barriosComunaOccidental.add("Caney");
+        barriosComunaOccidental.add("Santa Anita");
     }
 
 
