@@ -7,6 +7,7 @@ public class Usuario {
     private String cedula;
     private Integer edad;
     private String barrioResidencia;
+    private String contraseña;
     ArrayList<String> destinosFrecuentes;
 
     //Constructores
