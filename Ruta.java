@@ -11,6 +11,7 @@ public abstract class  Ruta {
     Scanner teclado = new Scanner(System.in);
 
     public Ruta(){
+        //dfsd
 
     }
     public Ruta(String nombreRuta, ArrayList<String>paraderos, String horaInicio, String horaFin, ArrayList<Integer> calificacionesRutas ){

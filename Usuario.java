@@ -9,7 +9,7 @@ public class Usuario {
     private String barrioResidencia;
     private String contraseña;
     ArrayList<String> destinosFrecuentes;
-
+//peo
     //Constructores
     public Usuario() {
     }
