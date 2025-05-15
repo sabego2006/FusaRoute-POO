@@ -15,12 +15,13 @@ public class Usuario {
     }
 
 
-    public Usuario(String nombre, String cedula, Integer edad, String barrioResidencia, ArrayList<String> destinosFrecuentes) {
+    public Usuario(String nombre, String cedula, Integer edad, String barrioResidencia,String contraseña, ArrayList<String> destinosFrecuentes) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.barrioResidencia = barrioResidencia;
         this.destinosFrecuentes = destinosFrecuentes;
+        this.contraseña=contraseña;
     }
     //Metodos
     public void seleccionarDestino(String[] destinos, Integer indice){
@@ -74,6 +75,14 @@ public class Usuario {
     public void setDestinosFrecuentes(ArrayList<String> destinosFrecuentes) {
         this.destinosFrecuentes = destinosFrecuentes;
     }
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
 
 
 }
