@@ -14,7 +14,7 @@ public class RutaUrbana extends Ruta {
     public RutaUrbana() {
     }
     public void nombreComunas(){
-        System.out.println("Estan son las comunas urbanas de Fusagasuga");
+        System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
         comunas.add("Centro");
         comunas.add("Norte");
         comunas.add("Occidental");

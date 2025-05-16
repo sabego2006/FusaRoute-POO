@@ -15,15 +15,23 @@ public class SistemaTransporte {
     }
 
 //Métodos:
+    public void menuInicio(){
+        System.out.println("¡¡BIENVENIDO A FUSAROUT!!");
+        System.out.println("A continuación lo llevaremos a nuestro menú " +
+                "\n 1: Iniciar sesión usuario");
+
+    }
+
     public void inicializarRutas(){
 
     }
     public void registrarUsuario(){
+        Scanner teclado = new Scanner(System.in);
         System.out.println("---------------------------------------------------");
         System.out.println("señor usuario, por favor registrese en Fusarout con su nombre completo");
         usuarios = Scanner.nextLine();
 
-        usuarios.replace(".",".");
+        usuarios.replaceAll(".",",");
         usuarios.toLowerCase();
 
     }
@@ -34,25 +42,35 @@ public class SistemaTransporte {
     }
     public void añadirDestinoFavorito(){
         System.out.println("-------------------------------  ------------------");
-        System.out.println("¿deseas agregar tu destino favorito?");
+        System.out.println("¿Desea agregar tu destino favorito?");
 
     }
     public void mostrarDestinosUsarios(){
+        System.out.println("---------------------------------------------------");
+        System.out.println("¿Desea agregar un destino?");
 
     }
     public void barriosMasVisitado(){
+        System.out.println("---------------------------------------------------");
+        System.out.println("El barrio mas visitado es: ");
 
     }
     public void calcularPromedioEdad(){
+        System.out.println();
 
     }
     public void buscarRutaPorBarrios(){
+        System.out.println("---------------------------------------------------");
+        System.out.println("¿Desea buscar ruta por barrio?");
+
 
     }
     public void mostrarRutas(){
 
     }
     public void calificarRuta(){
+        System.out.println("----------------------------------------------------");
+        System.out.println("¿Quisiera calificar la ruta?Aa");
 
     }
     public void rutaMejorCalificada(){
