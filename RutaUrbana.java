@@ -3,13 +3,16 @@ import java.util.Scanner;
 
 public class RutaUrbana extends Ruta {
     //Hereda los atributos de su padre
-    ArrayList<String> comunas = new ArrayList<>();
-    ArrayList<String> barriosComunaCentro = new ArrayList<>();
-    ArrayList<String> barriosComunaNorte = new ArrayList<>();
-    ArrayList<String> barriosComunaOccidental = new ArrayList<>();
+
+   protected ArrayList<String> comunas = new ArrayList<>();
+    protected ArrayList<String> barriosComunaCentro = new ArrayList<>();
+    protected ArrayList<String> barriosComunaNorte = new ArrayList<>();
+    protected ArrayList<String> barriosComunaOccidental = new ArrayList<>();
     ArrayList<String> barriosComunaOriental = new ArrayList<>();
     ArrayList<String> barriosComunaSurOriental = new ArrayList<>();
     ArrayList<String> barriosComunaSurOccidental = new ArrayList<>();
+    public RutaUrbana() {
+    }
     public void nombreComunas(){
         System.out.println("Estan son las comunas urbanas de Fusagasuga");
         comunas.add("Centro");
@@ -25,8 +28,6 @@ public class RutaUrbana extends Ruta {
 
     }
 
-    public RutaUrbana() {
-    }
 
     public void nombreBarrioComunaCentro(){
         barriosComunaCentro.add("Potosi");
@@ -93,8 +94,8 @@ public class RutaUrbana extends Ruta {
 
     public Integer validarCase(Integer opcionComuna){
         Scanner teclado = new Scanner(System.in);
-        if (opcionComuna>=6 || opcionComuna<0){
-            while (opcionComuna>=6 || opcionComuna<0){
+        if (opcionComuna>=6 || opcionComuna<=0){
+            while (opcionComuna>=6 || opcionComuna<=0){
                 System.out.println("numero incorrecot, vuelelo a intentar");
                 opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
             }
@@ -107,7 +108,7 @@ public class RutaUrbana extends Ruta {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escoge una opcion: ");
         Integer opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
-        if (opcionComuna>=6 || opcionComuna<0){
+        if (opcionComuna>=6 || opcionComuna<=0){
             opcionComuna= validarCase(opcionComuna);
         }
         switch (opcionComuna){
@@ -133,19 +134,5 @@ public class RutaUrbana extends Ruta {
                 System.out.println("opcion invalido, vuelvelo a intentarlo");
         }
     }
-    String[][] barriosPorComuna = {
-            {"Potosi", "Luxemburgo", "Galeria"}, // Centro
-            {"Gaitan", "La Cabaña", "El Eden", "Carlos Lleras", "Villa Natalia"}, // Norte
-            {"San Mateo", "Manila", "Convoy", "Caney", "Santa Anita"}, // Occidental
-            {"Pekin", "Coburgo", "Bonet", "Los Sauces"}, // Oriental
-            {"Llano Largo", "La Pampa", "Coviproof", "Maiz Amarillo", "Ebenezer", "Llano Verde", "Gran Colombia", "San Francisco"}, // Sur Occidente
-            {"Balmoral", "Fusacatan", "La Macarena", "EL Vergel", "San Fernando", "Camino Real"} //Sur Oriente
-    };
 
-    public RutaUrbana(String[][] barriosPorComuna) {
-        this.barriosPorComuna = barriosPorComuna;
-    }
-
-    public RutaUrbana(String rutaSurOriente, String[] comunas, String s, String s1) {
-    }
 }
