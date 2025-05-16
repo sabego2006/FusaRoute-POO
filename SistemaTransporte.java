@@ -18,7 +18,10 @@ public class SistemaTransporte {
     public void menuInicio(){
         System.out.println("¡¡BIENVENIDO A FUSAROUT!!");
         System.out.println("A continuación lo llevaremos a nuestro menú " +
-                "\n 1: Iniciar sesión usuario");
+                "\n 1: Iniciar sesión usuario " +
+                "\n 2: registrar usuario " +
+                "\n 3: iniciar sesion administrador " + "" +
+                "\n 4: registrar administrador");
 
     }
 
