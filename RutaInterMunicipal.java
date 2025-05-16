@@ -2,19 +2,24 @@ import java.util.ArrayList;
 
 public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
-    String[] rutasIntermunicipales = {
-            "Pasca", "Arbelaez", "Chinauta", "Silvania", "Agua Bonita", "Tibacuy", "Novillero"};
+    ArrayList<String>rutasIntermunicipales = new ArrayList<>();
+    public void nombreRutasIntermunicipales(){
+        rutasIntermunicipales.add("Pasca");
+        rutasIntermunicipales.add("Arbelaez");
+        rutasIntermunicipales.add("Chinauta");
+        rutasIntermunicipales.add("Silvania");
+        rutasIntermunicipales.add("Agua Bonita");
+        rutasIntermunicipales.add("Tibacuy");
+        rutasIntermunicipales.add("Novillero");
+        Integer contador=1;
+        for (String ruta: rutasIntermunicipales){
+            System.out.println(contador+": "+ruta);
+            contador+=1;
+        }
+    }
 
     public RutaInterMunicipal() {
-        this.rutasIntermunicipales = rutasIntermunicipales;
 
     }
 
-    public String[] getRutasIntermunicipales() {
-        return rutasIntermunicipales;
-    }
-
-    public void setRutasIntermunicipales(String[] rutasIntermunicipales) {
-        this.rutasIntermunicipales = rutasIntermunicipales;
-    }
 }
