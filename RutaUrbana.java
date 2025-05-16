@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RutaUrbana extends Ruta {
-    //Hereda los atributos de su padre
+
 
    protected ArrayList<String> comunas = new ArrayList<>();
     protected ArrayList<String> barriosComunaCentro = new ArrayList<>();
@@ -92,7 +92,7 @@ public class RutaUrbana extends Ruta {
         }
     }
 
-    public Integer validarCase(Integer opcionComuna){
+    public static Integer validarCase(Integer opcionComuna){
         Scanner teclado = new Scanner(System.in);
         if (opcionComuna>=6 || opcionComuna<=0){
             while (opcionComuna>=6 || opcionComuna<=0){

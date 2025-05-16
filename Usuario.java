@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuario {
 
@@ -6,7 +7,6 @@ public class Usuario {
     private String nombre;
     private String cedula;
     private Integer edad;
-    private String barrioResidencia;
     private String contraseña;
     ArrayList<String> destinosFrecuentes;
 //peo
@@ -15,11 +15,10 @@ public class Usuario {
     }
 
 
-    public Usuario(String nombre, String cedula, Integer edad, String barrioResidencia,String contraseña, ArrayList<String> destinosFrecuentes) {
+    public Usuario(String nombre, String cedula, Integer edad, String contraseña, ArrayList<String> destinosFrecuentes) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
-        this.barrioResidencia = barrioResidencia;
         this.destinosFrecuentes = destinosFrecuentes;
         this.contraseña=contraseña;
     }
@@ -37,7 +36,6 @@ public class Usuario {
         System.out.println("Nombre: " + Usuario.this.nombre);
         System.out.println("Cedula: " + Usuario.this.cedula);
         System.out.println("Edad: " + Usuario.this.edad);
-        System.out.println("Barrio de residencia: " + Usuario.this.barrioResidencia);
         System.out.println("Destinos frecuentes: " + Usuario.this.destinosFrecuentes);
     }
 
@@ -64,14 +62,6 @@ public class Usuario {
 
     public void setEdad(Integer edad) {
         this.edad = edad;
-    }
-
-    public String getBarrioResidencia() {
-        return barrioResidencia;
-    }
-
-    public void setBarrioResidencia(String barrioResidencia) {
-        this.barrioResidencia = barrioResidencia;
     }
 
     public ArrayList<String> getDestinosFrecuentes() {
