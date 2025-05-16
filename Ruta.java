@@ -10,7 +10,7 @@ public abstract class  Ruta {
     Scanner teclado = new Scanner(System.in);
 
     public Ruta(){
-        //dfsd
+
 
     }
     public Ruta(String nombreRuta, String horaInicio, String horaFin, ArrayList<Integer> calificacionesRutas ){

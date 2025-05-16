@@ -5,10 +5,11 @@ public class Administrador extends Usuario{
     public Administrador() {
     }
 
-    public Administrador(String nombre, String cedula, Integer edad, String barrioResidencia, String contraseña, ArrayList<String> destinosFrecuentes) {
-        super(nombre, cedula, edad, barrioResidencia, contraseña, destinosFrecuentes);
+    public Administrador(String nombre, String cedula, Integer edad,  String contraseña, ArrayList<String> destinosFrecuentes) {
+        super(nombre, cedula, edad, contraseña, destinosFrecuentes);
     }
 
+    @Override
     public void mostrarInfo(){
 
     }
