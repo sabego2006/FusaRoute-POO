@@ -33,16 +33,17 @@ public class MainPrueba {
                 break;
             case 2:
                 rutitaInMunicipal.nombreRutasIntermunicipales();
+                rutitaInMunicipal.mostrarInforRutasIntermunicipal();
                 break;
         }
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
+        Administrador administrador = new Administrador();
         RutaUrbana rutitaUrbanita = new RutaUrbana();
         RutaInterMunicipal rutitaInMunicipal = new RutaInterMunicipal();
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
-
         sistemaTransporte.menuInicio();
         System.out.println("tipos de ruta \n 1: urbana \n 2: intermunicipal");
         Integer opcionRuta= (int)Double.parseDouble(teclado.next().trim().replace(",","."));
@@ -56,7 +57,9 @@ public class MainPrueba {
                 break;
             case 2:
                 rutitaInMunicipal.nombreRutasIntermunicipales();
+                rutitaInMunicipal.mostrarInforRutasIntermunicipal();
                 break;
         }
+        sistemaTransporte.mostrarUsuario();
     }
 }

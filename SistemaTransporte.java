@@ -6,7 +6,7 @@ public class SistemaTransporte  {
     String [] ruta;
     Integer cantidadRutas;
     ArrayList<String> rutas;
-
+    Integer contadorUsuario=0;
     public SistemaTransporte() {
 
     }
@@ -34,26 +34,34 @@ public class SistemaTransporte  {
     }
     public void registrarUsuario(){
         Scanner teclado = new Scanner(System.in);
-        Usuario usuario = new Usuario();
-        Integer contadorUsuario=0;
-        System.out.println("vamos a registrar su usuario ");
-        System.out.println("ingrese su nombre ");
-        usuario.setNombre(teclado.next());
-        System.out.println("ingrese su documento de identidad ");
-        usuario.setCedula(teclado.next());
-        System.out.println("ingrese su edad ");
-        usuario.setEdad(teclado.nextInt());
-        System.out.println("Ingresa una contraseña ");
-        usuario.setContraseña(teclado.next());
-        usuarios.add(new Usuario());
-        System.out.println();
+
+
+        for (int i=0; i<2; i++){
+            Usuario usuario = new Usuario();
+            System.out.println("vamos a registrar su usuario ");
+            System.out.println("ingrese su nombre ");
+            usuario.setNombre(teclado.next());
+            System.out.println("ingrese su documento de identidad ");
+            usuario.setCedula(teclado.next());
+            System.out.println("ingrese su edad ");
+            usuario.setEdad(teclado.nextInt());
+            System.out.println("Ingresa una contraseña ");
+            usuario.setContraseña(teclado.next());
+            System.out.println("ingresa tu barrio de recidencia ");
+            usuario.setBarrioDeResidencia(teclado.next());
+            usuarios.add(usuario);
+            contadorUsuario+=1;
+        }
+
+
 
 
     }
     public void mostrarUsuario(){
+        System.out.println("hay un total de "+contadorUsuario + " Usuarios ");
         System.out.println("Lista de usuarios registrados:");
-        for (Usuario u : usuarios) {
-            System.out.println(" Nombre: " + u.getNombre() + ", Cédula: " + u.getCedula() + ", Edad: " + u.getEdad());
+        for (Usuario us : usuarios) {
+            System.out.println(" Nombre: " + us.getNombre() + ", Cédula: " + us.getCedula() + ", Edad: " + us.getEdad());
         }
     }
     public void añadirDestinoFavorito(){

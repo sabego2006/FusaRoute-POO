@@ -102,8 +102,9 @@ public class RutaUrbana extends Ruta {
         }
         return opcionComuna;
     }
+    public void mostrarInfoRutas(){
 
-
+    }
     public void barrioComuna(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escoge una opcion: ");
@@ -114,6 +115,7 @@ public class RutaUrbana extends Ruta {
         switch (opcionComuna){
             case 1:
                 nombreBarrioComunaCentro();
+
                 break;
             case 2:
                 nombreBarrioComunaNorte();
@@ -133,6 +135,7 @@ public class RutaUrbana extends Ruta {
             default:
                 System.out.println("opcion invalido, vuelvelo a intentarlo");
         }
+
     }
 
 }

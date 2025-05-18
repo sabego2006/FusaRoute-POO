@@ -8,6 +8,10 @@ public class Usuario {
     private String cedula;
     private Integer edad;
     private String contraseña;
+
+
+
+    private String barrioDeResidencia;
     ArrayList<String> destinosFrecuentes;
 
     //Constructores
@@ -79,6 +83,12 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
+    public String getBarrioDeResidencia() {
+        return barrioDeResidencia;
+    }
 
+    public void setBarrioDeResidencia(String barrioDeResidencia) {
+        this.barrioDeResidencia = barrioDeResidencia;
+    }
 
 }
