@@ -60,24 +60,12 @@ public class MainPrueba {
                 break;
             case 2:
                  sistemaTransporte.registrarUsuario();
+                 sistemaTransporte.escogerTipodeRuta();
+                 sistemaTransporte.salirOnoSistema();
                 break;
             case 3:
                 break;
         }
-     while (opcionSistema!=2){
-         sistemaTransporte.mostrarUsuario();
-            System.out.println("desea salir del sistema? \n" +
-                    "1: no \n" +
-                    "2: si");
-            opcionSistema=(int)Double.parseDouble(teclado.next().replace(",","."));
-            switch (opcionSistema){
-                case 1:
-                    elegirRUtaUsuario();
-                    break;
-                case 2:
-                    break;
-            }
-       }
      sistemaTransporte.mostrarUsuario();
 
     }

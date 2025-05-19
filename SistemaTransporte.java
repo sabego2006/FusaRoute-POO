@@ -61,7 +61,7 @@ static Integer validarCase(Integer opcionRuta){
         Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
         switch (opcionMenu){
             case 1:
-                System.out.println("a");
+                registrarUsuario();
                 break;
             case 2:
                 registrarUsuario();
@@ -114,6 +114,23 @@ static Integer validarCase(Integer opcionRuta){
 
         if (!encontrado) {
             System.out.println("⚠️ Cédula o contraseña incorrecta. Inténtelo nuevamente.");
+        }
+    }
+
+    public void salirOnoSistema(){
+        Integer opcionSistema=0;
+        while (opcionSistema!=2){
+            System.out.println("desea salir del sistema? \n" +
+                    "1: no \n" +
+                    "2: si");
+            opcionSistema=(int)Double.parseDouble(teclado.next().replace(",","."));
+            switch (opcionSistema){
+                case 1:
+                    menuInicio();
+                    break;
+                case 2:
+                    break;
+            }
         }
     }
 
