@@ -3,13 +3,16 @@ import java.util.Scanner;
 
 public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
-    ArrayList<String>rutasIntermunicipales = new ArrayList<>();
+
     ArrayList<String>inforRutas = new ArrayList<>();
+
+
 
     public void infoRutaPasca () {
         System.out.println("el paradero queda en la galeria");
 
     }
+
     public void infoRutaArbalaez(){
         System.out.println("el paradero queda en frente del palacio de las tortas");
     }
@@ -28,10 +31,6 @@ public class RutaInterMunicipal extends Ruta {
     public void infoRutaNovillero(){
         System.out.println();
     }
-
-
-
-
 
     public void nombreRutasIntermunicipales(){
         rutasIntermunicipales.add("Pasca");
