@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
 
-    ArrayList<String>inforRutas = new ArrayList<>();
 
     protected String destino;
     protected String inicioruta;
@@ -13,8 +12,8 @@ public class RutaInterMunicipal extends Ruta {
     protected String horafin;
     protected String FrecuenciaBus;
 
-    public RutaInterMunicipal(inforRutas, String destino, String inicioruta, String finruta, String horainicio, String horafin, String frecuenciaBus) {
-        this.inforRutas = inforRutas;
+    public RutaInterMunicipal( String destino, String inicioruta, String finruta, String horainicio, String horafin, String frecuenciaBus) {
+
         this.destino = destino;
         this.inicioruta = inicioruta;
         this.finruta = finruta;
@@ -72,14 +71,14 @@ public class RutaInterMunicipal extends Ruta {
         }
         return opcionComuna;
     }
-    public void mostrarInforRutasIntermunicipal(){
+    public void mostrarInforRutasIntermunicipal() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escoge una opcion: ");
-        Integer opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
-        if (opcionComuna>=6 || opcionComuna<=0){
-            opcionComuna= validarCase(opcionComuna);
+        Integer opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+        if (opcionComuna >= 6 || opcionComuna <= 0) {
+            opcionComuna = validarCase(opcionComuna);
         }
-        switch (opcionComuna){
+        switch (opcionComuna) {
             case 1:
                 infoRutaPasca();
 
@@ -106,7 +105,52 @@ public class RutaInterMunicipal extends Ruta {
         }
 
     }
+public String getDestino() {
+    return destino;
+}
 
+public void setDestino(String destino) {
+    this.destino = destino;
+}
+
+public String getInicioruta() {
+    return inicioruta;
+}
+
+public void setInicioruta(String inicioruta) {
+    this.inicioruta = inicioruta;
+}
+
+public String getFinruta() {
+    return finruta;
+}
+
+public void setFinruta(String finruta) {
+    this.finruta = finruta;
+}
+
+public String getHorainicio() {
+    return horainicio;
+}
+
+public void setHorainicio(String horainicio) {
+    this.horainicio = horainicio;
+}
+
+public String getHorafin() {
+    return horafin;
+}
+
+public void setHorafin(String horafin) {
+    this.horafin = horafin;
+}
+
+public String getFrecuenciaBus() {
+    return FrecuenciaBus;
+}
+
+public void setFrecuenciaBus(String frecuenciaBus) {
+    FrecuenciaBus = frecuenciaBus;
 
 
 

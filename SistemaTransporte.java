@@ -9,12 +9,37 @@ public class SistemaTransporte  {
     Integer cantidadRutas;
     ArrayList<RutaUrbana> rutasUrbanas;
 
-    ArrayList<RutaInterMunicipal> rutasInterMunicipales;
+    ArrayList<RutaInterMunicipal> rutasInterMunicipales= new ArrayList<>();
 
 //cambio auqi
     Integer contadorUsuario = 0;
     public SistemaTransporte() {
 
+    }
+
+
+    public void menuMostrarRutaIntermunicipal(Scanner teclado) {
+        if (rutasInterMunicipales.isEmpty()) {
+            System.out.println("No hay rutas intermunicipales registradas.");
+            return;
+        }
+
+
+        System.out.println("=== RUTAS INTERMUNICIPALES ===");
+        for (int i = 0; i < rutasInterMunicipales.size(); i++) {
+            System.out.println(i + ". " + rutasInterMunicipales.get(i).getDestino());
+        }
+
+        System.out.print("Seleccione una ruta: ");
+        int opcion = teclado.nextInt();
+        teclado.nextLine();
+
+        if (opcion >= 0 && opcion < rutasInterMunicipales.size()) {
+            RutaInterMunicipal ruta = rutasInterMunicipales.get(opcion);
+            ruta.mostrarInfoRuta(); // 🔥 POLIMORFISMO aquí
+        } else {
+            System.out.println("Opción inválida.");
+        }
     }
 
     public void inicializarRutasPredeterminadas() {
