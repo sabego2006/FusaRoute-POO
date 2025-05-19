@@ -16,6 +16,37 @@ public class SistemaTransporte  {
     }
 
 //Métodos:
+static Integer validarCase(Integer opcionRuta){
+    Scanner teclado = new Scanner(System.in);
+    if (opcionRuta>2 || opcionRuta<=0){
+        while (opcionRuta>2 || opcionRuta<=0){
+            System.out.println("numero incorrecot, vuelelo a intentar");
+            opcionRuta=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
+        }
+    }
+    return opcionRuta;
+}
+
+    public void escogerTipodeRuta(){
+        RutaUrbana rutitaUrbanita = new RutaUrbana();
+        RutaInterMunicipal rutitaInMunicipal = new RutaInterMunicipal();
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("tipos de ruta \n 1: urbana \n 2: intermunicipal");
+        Integer opcionRuta= (int)Double.parseDouble(teclado.next().trim().replace(",","."));
+        if (opcionRuta>2 || opcionRuta<=0){
+            opcionRuta = validarCase(opcionRuta);
+        }
+        switch (opcionRuta){
+            case 1:
+                rutitaUrbanita.nombreComunas();
+                rutitaUrbanita.barrioComuna();
+                break;
+            case 2:
+                rutitaInMunicipal.nombreRutasIntermunicipales();
+                rutitaInMunicipal.mostrarInforRutasIntermunicipal();
+                break;
+        }
+    }
     public void menuInicio(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("¡BIENVENIDO A FUSAROUTS! \n continuación lo llevaremos a nuestro menú ");
@@ -27,6 +58,9 @@ public class SistemaTransporte  {
         Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
         if (opcionMenu.equals(2)){
             registrarUsuario();
+        }
+        if ((opcionMenu.equals(3))){
+            return;
         }
     }
     public void inicializarRutas(){
