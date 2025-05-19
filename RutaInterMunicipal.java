@@ -27,12 +27,12 @@ public class RutaInterMunicipal extends Ruta {
     }
 
     public void infoRutaPasca () {
-        System.out.println("el paradero queda en la galeria");
+        System.out.println("El paradero esta ubicado en el Potosi");
 
     }
 
     public void infoRutaArbalaez(){
-        System.out.println("el paradero queda en frente del palacio de las tortas");
+        System.out.println("el paradero esta ubicado frente al palacio de las tortas");
     }
     public void infoRutaChinauta(){
         System.out.println();

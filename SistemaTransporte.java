@@ -10,7 +10,7 @@ public class SistemaTransporte  {
     ArrayList<RutaUrbana> rutasUrbanas;
 
     ArrayList<RutaInterMunicipal> rutasInterMunicipales;
-    rutasInterMunicipales.add(new rutaPasca());
+
 
     Integer contadorUsuario = 0;
     public SistemaTransporte() {

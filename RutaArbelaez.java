@@ -9,7 +9,7 @@ public class RutaArbelaez extends RutaInterMunicipal {
         System.out.println(" Paraderos: Terminal (cra 8, frente al palacio de las tortas) --> Arbelaez (CL. 6 #6-2a 5-56) ");
         System.out.println(" Tiempo Estimado de trayecto: 40 minutos ");
         System.out.println(" Frucuencia estimada: 1 hora");
-        System.out.println(" Costo: $3.900 ");
+        System.out.println(" Costo: $6.000 ");
 
     }
 }
