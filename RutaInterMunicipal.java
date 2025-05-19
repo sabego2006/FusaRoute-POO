@@ -33,7 +33,7 @@ public class RutaInterMunicipal extends Ruta {
     }
 
     public void nombreRutasIntermunicipales(){
-        rutasIntermunicipales.add("Pasca");
+        rutasIntermunicipales.add(RutaPasca);
         rutasIntermunicipales.add("Arbelaez");
         rutasIntermunicipales.add("Chinauta");
         rutasIntermunicipales.add("Silvania");
