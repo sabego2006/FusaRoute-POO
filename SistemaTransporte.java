@@ -14,6 +14,9 @@ public class SistemaTransporte {
     }
 
 //Métodos:
+
+    public void menuInicio(){
+
     public void inicializarRutas(){
 
     }
