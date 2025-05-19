@@ -6,15 +6,21 @@ public class RutaInterMunicipal extends Ruta {
     ArrayList<String>rutasIntermunicipales = new ArrayList<>();
     ArrayList<String>inforRutas = new ArrayList<>();
 
+    public RutaInterMunicipal(String pasca, String[] strings, String s, String s1) {
+    }
+
+    public void mostrarInfoRuta (){
+
+    }
     public void infoRutaPasca () {
-        System.out.println("el paradero queda en la galeria");
+        System.out.println(" **** El paradero queda en la galeria **** ");
 
     }
     public void infoRutaArbalaez(){
-        System.out.println("el paradero queda en frente del palacio de las tortas");
+        System.out.println(" **** El paradero queda frenta al palacio de las tortas **** ");
     }
     public void infoRutaChinauta(){
-        System.out.println();
+        System.out.println(" **** ");
     }
     public void infoRutaSilvania(){
         System.out.println();
