@@ -2,11 +2,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SistemaTransporte  {
+
+    Scanner teclado = new Scanner(System.in);
+
     ArrayList<Usuario> usuarios = new ArrayList<>();
     String [] ruta;
     Integer cantidadRutas;
-    ArrayList<String> rutas;
-    Integer contadorUsuario=0;
+    ArrayList<RutaUrbana> rutasUrbanas;
+    ArrayList<RutaInterMunicipal> rutasInterMunicipales;
+    Integer contadorUsuario = 0;
     public SistemaTransporte() {
 
     }
@@ -20,7 +24,7 @@ static Integer validarCase(Integer opcionRuta){
     Scanner teclado = new Scanner(System.in);
     if (opcionRuta>2 || opcionRuta<=0){
         while (opcionRuta>2 || opcionRuta<=0){
-            System.out.println("numero incorrecot, vuelelo a intentar");
+            System.out.println(", vuelelo a intentar");
             opcionRuta=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
         }
     }
@@ -56,11 +60,15 @@ static Integer validarCase(Integer opcionRuta){
                 "3: Salir");
         System.out.println("escoge una opcion :");
         Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
-        if (opcionMenu.equals(2)){
-            registrarUsuario();
-        }
-        if ((opcionMenu.equals(3))){
-            return;
+        switch (opcionMenu){
+            case 1:
+                registrarUsuario();
+                break;
+            case 2:
+                registrarUsuario();
+                break;
+            case 3:
+                break;
         }
     }
     public void inicializarRutas(){
@@ -68,9 +76,6 @@ static Integer validarCase(Integer opcionRuta){
     }
     public void registrarUsuario(){
         Scanner teclado = new Scanner(System.in);
-
-
-        for (int i=0; i<2; i++){
             Usuario usuario = new Usuario();
             System.out.println("vamos a registrar su usuario ");
             System.out.println("ingrese su nombre ");
@@ -85,18 +90,61 @@ static Integer validarCase(Integer opcionRuta){
             usuario.setBarrioDeResidencia(teclado.next());
             usuarios.add(usuario);
             contadorUsuario+=1;
+    }
+    public void iniciarSesionUsario(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Iniciar sesión");
+
+        System.out.print("Ingrese su cédula: ");
+        String cedula = teclado.next().trim();
+
+        System.out.print("Ingrese su contraseña: ");
+        String contraseña = teclado.next().trim();
+
+        boolean encontrado = false;
+
+        for (Usuario usuario : usuarios) {
+            if (usuario.getCedula().equals(cedula) && usuario.getContraseña().equals(contraseña)) {
+                System.out.println("¡Bienvenido/a " + usuario.getNombre() + "!");
+                encontrado = true;
+
+
+                break;
+            }
         }
 
-
-
-
+        if (!encontrado) {
+            System.out.println("⚠️ Cédula o contraseña incorrecta. Inténtelo nuevamente.");
+        }
     }
+
+    public void salirOnoSistema(){
+        Integer opcionSistema=0;
+        while (opcionSistema!=2){
+            System.out.println("desea salir del sistema? \n" +
+                    "1: no \n" +
+                    "2: si");
+            opcionSistema=(int)Double.parseDouble(teclado.next().replace(",","."));
+            switch (opcionSistema){
+                case 1:
+                    menuInicio();
+                    break;
+                case 2:
+                    break;
+            }
+        }
+    }
+
     public void mostrarUsuario(){
         System.out.println("hay un total de "+contadorUsuario + " Usuarios ");
         System.out.println("Lista de usuarios registrados:");
         for (Usuario us : usuarios) {
             System.out.println(" Nombre: " + us.getNombre() + ", Cédula: " + us.getCedula() + ", Edad: " + us.getEdad());
         }
+    }
+
+    public void menuUsuario(){
+
     }
     public void añadirDestinoFavorito(){
 
