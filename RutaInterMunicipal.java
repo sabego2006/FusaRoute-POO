@@ -6,7 +6,25 @@ public class RutaInterMunicipal extends Ruta {
 
     ArrayList<String>inforRutas = new ArrayList<>();
 
+    protected String destino;
+    protected String inicioruta;
+    protected String finruta;
+    protected String horainicio;
+    protected String horafin;
+    protected String FrecuenciaBus;
 
+    public RutaInterMunicipal(inforRutas, String destino, String inicioruta, String finruta, String horainicio, String horafin, String frecuenciaBus) {
+        this.inforRutas = inforRutas;
+        this.destino = destino;
+        this.inicioruta = inicioruta;
+        this.finruta = finruta;
+        this.horainicio = horainicio;
+        this.horafin = horafin;
+        FrecuenciaBus = frecuenciaBus;
+    }
+    public void mostrarInfoRuta(){
+
+    }
 
     public void infoRutaPasca () {
         System.out.println("el paradero queda en la galeria");
