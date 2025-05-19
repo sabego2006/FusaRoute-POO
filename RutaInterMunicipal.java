@@ -5,6 +5,7 @@ public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
     ArrayList<String>rutasIntermunicipales = new ArrayList<>();
     ArrayList<String>inforRutas = new ArrayList<>();
+
     public void infoRutaPasca () {
         System.out.println("el paradero queda en la galeria");
 
@@ -12,7 +13,21 @@ public class RutaInterMunicipal extends Ruta {
     public void infoRutaArbalaez(){
         System.out.println("el paradero queda en frente del palacio de las tortas");
     }
-
+    public void infoRutaChinauta(){
+        System.out.println();
+    }
+    public void infoRutaSilvania(){
+        System.out.println();
+    }
+    public void infoRutaAguaBonita(){
+        System.out.println();
+    }
+    public void infoRutaTibacuy(){
+        System.out.println();
+    }
+    public void infoRutaNovillero(){
+        System.out.println();
+    }
 
 
 
@@ -55,6 +70,20 @@ public class RutaInterMunicipal extends Ruta {
             case 2:
                 infoRutaArbalaez();
                 break;
+            case 3:
+                infoRutaChinauta();
+                break;
+            case 4:
+                infoRutaSilvania();
+                break;
+            case 5:
+                infoRutaAguaBonita();
+                break;
+            case 6:
+                infoRutaTibacuy();
+                break;
+            case 7:
+                infoRutaNovillero();
             default:
                 System.out.println("opcion invalido, vuelvelo a intentarlo");
         }
