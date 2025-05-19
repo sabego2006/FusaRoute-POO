@@ -13,6 +13,10 @@ public class RutaUrbana extends Ruta {
     ArrayList<String> barriosComunaSurOccidental = new ArrayList<>();
     public RutaUrbana() {
     }
+
+    public RutaUrbana(String granColombia, String[] strings, String s) {
+    }
+
     public void nombreComunas(){
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
         comunas.add("Centro");
@@ -137,5 +141,14 @@ public class RutaUrbana extends Ruta {
         }
 
     }
+   // public void  infocentro (){
+        //Scanner teclado = new Scanner(System.in);
+        //System.out.println(" la ruta seleccionada es " + barriosComunaCentro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         );
+        //System.out.println("punto de salida barrio San francisco");
+       // System.out.println("");
+
 
 }
+
+
+
