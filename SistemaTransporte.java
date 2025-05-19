@@ -1,10 +1,12 @@
 import java.util.ArrayList;
-public class SistemaTransporte {
-    ArrayList<Usuario> usuarios;
+import java.util.Scanner;
+
+public class SistemaTransporte  {
+    ArrayList<Usuario> usuarios = new ArrayList<>();
     String [] ruta;
-    String[] barrios = {"gaitan","encanto"};
     Integer cantidadRutas;
     ArrayList<String> rutas;
+    Integer contadorUsuario=0;
     public SistemaTransporte() {
 
     }
@@ -14,17 +16,53 @@ public class SistemaTransporte {
     }
 
 //Métodos:
-
     public void menuInicio(){
-
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("¡BIENVENIDO A FUSAROUTS! \n continuación lo llevaremos a nuestro menú ");
+        System.out.println("----------------------------------------------------------------------");
+        System.out.println("1: iniciar sesion \n" +
+                "2: registrar usuario \n"+
+                "3: Salir");
+        System.out.println("escoge una opcion :");
+        Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
+        if (opcionMenu.equals(2)){
+            registrarUsuario();
+        }
+    }
     public void inicializarRutas(){
 
     }
     public void registrarUsuario(){
+        Scanner teclado = new Scanner(System.in);
+
+
+        for (int i=0; i<2; i++){
+            Usuario usuario = new Usuario();
+            System.out.println("vamos a registrar su usuario ");
+            System.out.println("ingrese su nombre ");
+            usuario.setNombre(teclado.next());
+            System.out.println("ingrese su documento de identidad ");
+            usuario.setCedula(teclado.next());
+            System.out.println("ingrese su edad ");
+            usuario.setEdad(teclado.nextInt());
+            System.out.println("Ingresa una contraseña ");
+            usuario.setContraseña(teclado.next());
+            System.out.println("ingresa tu barrio de recidencia ");
+            usuario.setBarrioDeResidencia(teclado.next());
+            usuarios.add(usuario);
+            contadorUsuario+=1;
+        }
+
+
+
 
     }
     public void mostrarUsuario(){
-
+        System.out.println("hay un total de "+contadorUsuario + " Usuarios ");
+        System.out.println("Lista de usuarios registrados:");
+        for (Usuario us : usuarios) {
+            System.out.println(" Nombre: " + us.getNombre() + ", Cédula: " + us.getCedula() + ", Edad: " + us.getEdad());
+        }
     }
     public void añadirDestinoFavorito(){
 

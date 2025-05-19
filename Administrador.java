@@ -11,7 +11,9 @@ public class Administrador extends Usuario{
 
     @Override
     public void mostrarInfo(){
-
+        SistemaTransporte sistemaTransporte = new SistemaTransporte();
+        sistemaTransporte.mostrarUsuario();
     }
+
 
 }

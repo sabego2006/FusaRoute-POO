@@ -1,13 +1,22 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
     ArrayList<String>rutasIntermunicipales = new ArrayList<>();
-
-
-    public RutaInterMunicipal() {
+    ArrayList<String>inforRutas = new ArrayList<>();
+    public void infoRutaPasca () {
+        System.out.println("el paradero queda en la galeria");
 
     }
+    public void infoRutaArbalaez(){
+        System.out.println("el paradero queda en frente del palacio de las tortas");
+    }
+
+
+
+
+
 
     public void nombreRutasIntermunicipales(){
         rutasIntermunicipales.add("Pasca");
@@ -21,6 +30,37 @@ public class RutaInterMunicipal extends Ruta {
             System.out.println((i+1)+": "+rutasIntermunicipales.get(i));
         }
     }
+    public static Integer validarCase(Integer opcionComuna){
+        Scanner teclado = new Scanner(System.in);
+        if (opcionComuna>=6 || opcionComuna<=0){
+            while (opcionComuna>=6 || opcionComuna<=0){
+                System.out.println("numero incorrecot, vuelelo a intentar");
+                opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
+            }
+        }
+        return opcionComuna;
+    }
+    public void mostrarInforRutasIntermunicipal(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Escoge una opcion: ");
+        Integer opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
+        if (opcionComuna>=6 || opcionComuna<=0){
+            opcionComuna= validarCase(opcionComuna);
+        }
+        switch (opcionComuna){
+            case 1:
+                infoRutaPasca();
+
+                break;
+            case 2:
+                infoRutaArbalaez();
+                break;
+            default:
+                System.out.println("opcion invalido, vuelvelo a intentarlo");
+        }
+
+    }
+
 
 
 
