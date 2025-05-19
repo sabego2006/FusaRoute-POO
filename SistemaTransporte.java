@@ -6,7 +6,6 @@ public class SistemaTransporte  {
     Scanner teclado = new Scanner(System.in);
 
     ArrayList<Usuario> usuarios = new ArrayList<>();
-    String [] ruta;
     Integer cantidadRutas;
     ArrayList<RutaUrbana> rutasUrbanas;
     ArrayList<RutaInterMunicipal> rutasInterMunicipales;

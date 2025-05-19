@@ -1,7 +1,7 @@
 
     public class RutaGrancolombia extends RutaUrbana {
     public RutaGrancolombia(){
-        super ("gran colombia", new String[]{"Ebenezer", "San Antonio"},"Tiempo estimado 15 min a 20 min ");
+        super ("gran colombia", rutasUrbanas{"Ebenezer", "San Antonio"},"Tiempo estimado 15 min a 20 min ");
 
     }
     @Override
