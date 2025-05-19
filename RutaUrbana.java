@@ -13,6 +13,7 @@ public class RutaUrbana extends Ruta {
     ArrayList<String> barriosComunaSurOccidental = new ArrayList<>();
     public RutaUrbana() {
     }
+
     public void nombreComunas(){
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
         comunas.add("Centro");

@@ -5,8 +5,9 @@ public class SistemaTransporte  {
     ArrayList<Usuario> usuarios = new ArrayList<>();
     String [] ruta;
     Integer cantidadRutas;
-    ArrayList<String> rutas;
-    Integer contadorUsuario=0;
+    ArrayList<RutaUrbana> rutasUrbanas;
+    ArrayList<RutaInterMunicipal> rutasInterMunicipales;
+    Integer contadorUsuario = 0;
     public SistemaTransporte() {
 
     }
@@ -20,7 +21,7 @@ static Integer validarCase(Integer opcionRuta){
     Scanner teclado = new Scanner(System.in);
     if (opcionRuta>2 || opcionRuta<=0){
         while (opcionRuta>2 || opcionRuta<=0){
-            System.out.println("numero incorrecot, vuelelo a intentar");
+            System.out.println(", vuelelo a intentar");
             opcionRuta=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
         }
     }

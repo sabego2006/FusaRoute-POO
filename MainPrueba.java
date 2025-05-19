@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
 public class MainPrueba {
+Scanner teclado = new Scanner(System.in);
 
     static Integer validarCase(Integer opcionRuta) {
         Scanner teclado = new Scanner(System.in);
         if (opcionRuta > 2 || opcionRuta <= 0) {
             while (opcionRuta > 2 || opcionRuta <= 0) {
-                System.out.println("numero incorrecot, vuelelo a intentar");
+                System.out.println("numero incorrecot, vuelvelo a intentar");
                 opcionRuta = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
             }
         }
