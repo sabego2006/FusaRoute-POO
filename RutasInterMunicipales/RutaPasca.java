@@ -1,3 +1,5 @@
+package RutasInterMunicipales;
+
 public class RutaPasca extends RutaInterMunicipal {
     public RutaPasca() {
         super("Pasca", new String[]{"Terminal (Potosi)", "Pasca (Parque principal)"}, "5:30 AM", "8:00 PM");
