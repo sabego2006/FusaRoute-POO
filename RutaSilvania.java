@@ -9,7 +9,7 @@ public class RutaSilvania extends RutaInterMunicipal {
         System.out.println(" Paraderos: Terminal (AV las palmas, cra 7 con calle 8) --> Silvania (Parque principal) ");
         System.out.println(" Tiempo Estimado de trayecto: 1 hora ");
         System.out.println(" Frucuencia estimada: 1 hora");
-        System.out.println(" Costo: $3.500");
+        System.out.println(" Costo: $3.800");
 
     }
 }
