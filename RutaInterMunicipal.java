@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class RutaInterMunicipal extends Ruta {
     //Hereda los atributos de su papa
-    String nombreRuta;
 
     ArrayList<String>inforRutas = new ArrayList<>();
 

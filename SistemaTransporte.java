@@ -8,7 +8,10 @@ public class SistemaTransporte  {
     ArrayList<Usuario> usuarios = new ArrayList<>();
     Integer cantidadRutas;
     ArrayList<RutaUrbana> rutasUrbanas;
+
     ArrayList<RutaInterMunicipal> rutasInterMunicipales;
+    rutasInterMunicipales.add(new rutaPasca());
+
     Integer contadorUsuario = 0;
     public SistemaTransporte() {
 
@@ -171,3 +174,4 @@ static Integer validarCase(Integer opcionRuta){
     }
 
 }
+
