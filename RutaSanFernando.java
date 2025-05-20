@@ -1,4 +1,3 @@
-package RutasUrbanas;
 public class RutaSanFernando extends RutaUrbana {
     public RutaSanFernando(){
         super ("San fernando","San Fernando ","San Antonio ","Tiempo estimado 20 min a 30 min");

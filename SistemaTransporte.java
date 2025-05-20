@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SistemaTransporte  {
+public class SistemaTransporte {
 
     Scanner teclado = new Scanner(System.in);
 
@@ -9,8 +9,12 @@ public class SistemaTransporte  {
     Integer cantidadRutas;
     ArrayList<RutaUrbana> rutasUrbanas;
 
-    ArrayList<RutaInterMunicipal> rutasInterMunicipales= new ArrayList<>();
-
+    ArrayList<RutaInterMunicipal> rutasIntermunicipales;
+     rutasInterMunicipales.add(RutaPasca);
+     rutasInterMunicipales.add(RutaArbelaez);
+     rutasInterMunicipales.add(RutaChinauta);
+     rutasInterMunicipales.add(RutaSilvania);
+     rutasInterMunicipales.add(RutaNovillero);
 //cambio auqi
     Integer contadorUsuario = 0;
     public SistemaTransporte() {
@@ -59,8 +63,8 @@ static Integer validarCase(Integer opcionRuta){
 }
 
     public void escogerTipodeRuta(){
-        RutaUrbana rutitaUrbanita = new RutaUrbana();
-        RutaInterMunicipal rutitaInMunicipal = new RutaInterMunicipal();
+        RutaUrbana rutaUrbana = new RutaUrbana();
+        RutaInterMunicipal rutaInterMunicipal = new RutaInterMunicipal();
         Scanner teclado = new Scanner(System.in);
         System.out.println("tipos de ruta \n 1: urbana \n 2: intermunicipal");
         Integer opcionRuta= (int)Double.parseDouble(teclado.next().trim().replace(",","."));
@@ -69,12 +73,12 @@ static Integer validarCase(Integer opcionRuta){
         }
         switch (opcionRuta){
             case 1:
-                rutitaUrbanita.nombreComunas();
-                rutitaUrbanita.barrioComuna();
+                rutaUrbana.nombreComunas();
+                rutaUrbana.barrioComuna();
                 break;
             case 2:
-                rutitaInMunicipal.nombreRutasIntermunicipales();
-                rutitaInMunicipal.mostrarInforRutasIntermunicipal();
+                rutaInterMunicipal.nombreRutasIntermunicipales();
+                rutaInterMunicipal.mostrarInforRutasIntermunicipal();
                 break;
         }
     }

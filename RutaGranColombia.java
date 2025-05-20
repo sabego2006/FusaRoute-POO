@@ -1,4 +1,4 @@
-package RutasUrbanas;
+
 public class RutaGrancolombia extends RutaUrbana {
     public RutaGrancolombia(){
         super ("gran colombia","Ebenezer", "San Antonio","Tiempo estimado 15 min a 20 min ");

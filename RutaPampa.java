@@ -1,5 +1,3 @@
-package RutasUrbanas;
-
 public class RutaPampa extends RutaUrbana {
     public RutaPampa(){
         super ("La Pampa","Los Girasoles ","El Gaitan","Tiempo estimado 20 min a 30 min");

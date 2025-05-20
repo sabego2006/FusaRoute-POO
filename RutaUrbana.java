@@ -3,8 +3,12 @@ import java.util.Scanner;
 
 public class RutaUrbana extends Ruta {
 
+    protected String nombre;
+    protected String rutainicio;
+    protected String rutafinal;
+    protected String tiempoestimado;
 
-   protected ArrayList<String> comunas = new ArrayList<>();
+    protected ArrayList<String> comunas = new ArrayList<>();
     protected ArrayList<String> barriosComunaCentro = new ArrayList<>();
     protected ArrayList<String> barriosComunaNorte = new ArrayList<>();
     protected ArrayList<String> barriosComunaOccidental = new ArrayList<>();
@@ -13,6 +17,7 @@ public class RutaUrbana extends Ruta {
     ArrayList<String> barriosComunaSurOccidental = new ArrayList<>();
     public RutaUrbana() {
     }
+
     public void nombreComunas(){
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
         comunas.add("Centro");

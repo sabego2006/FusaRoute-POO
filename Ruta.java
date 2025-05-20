@@ -20,12 +20,10 @@ public abstract class  Ruta {
         this.calificacionesRutas=calificacionesRutas;
     }
     public void agregarCalificacion(){
-        System.out.println("Califique su experiencia del 1-5 ⭐⭐⭐⭐⭐ ");
     }
     public void promedioCalificaciones(){
     }
     public void mostarInfoRuta(){
-
     }
 
 
