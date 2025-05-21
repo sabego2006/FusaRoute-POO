@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+// clase principal
 public class SistemaTransporte {
 
     Administrador administrador = new Administrador("Frank Ortegon","123456789",26,"solo_udec");
