@@ -1,15 +1,15 @@
 public class RutaSilvania extends RutaInterMunicipal {
     public RutaSilvania(){
-        super("Silvania", "Terminal (AV las palmas, cra 7 con calle 8)", " Silvania (parque principal)", "5:30 AM", "8:00 PM", "Frecuencia: 1 hora");
+        super("Silvania", "Terminal (AV las palmas, cra 7 con calle 8)", " Silvania (parque principal)", "5:30 AM a 8:00 PM", "Quebrajacho, Cucharal", "$5.000");
     }
 
     @Override
     public void mostrarInfoRuta() {
-        System.out.println(" Ruta Intermunicipal: SILVANIA ");
-        System.out.println(" Paraderos: Terminal (AV las palmas, cra 7 con calle 8) --> Silvania (Parque principal) ");
-        System.out.println(" Tiempo Estimado de trayecto: 1 hora ");
-        System.out.println(" Frucuencia estimada: 1 hora");
-        System.out.println(" Costo: $3.800");
+        System.out.println("Ruta Urbana:" + getNombre());
+        System.out.println("Paraderos: " + getRutaInicio() + " --> " + getRutaFinal());
+        System.out.println("Frecuencia Ruta: " + getTiempoEstimado());
+        System.out.println("esta ruta hace un recorrido por: "+getInformacion());
+        System.out.println("costo: $2.400 "+getCosto());
 
     }
 }

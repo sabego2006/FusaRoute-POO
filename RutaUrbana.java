@@ -3,10 +3,6 @@ import java.util.Scanner;
 
 public class RutaUrbana extends Ruta {
 
-    protected String nombre;
-    protected String rutainicio;
-    protected String rutafinal;
-    protected String tiempoestimado;
 
     protected ArrayList<String> comunas = new ArrayList<>();
     protected ArrayList<String> barriosComunaCentro = new ArrayList<>();
@@ -15,8 +11,16 @@ public class RutaUrbana extends Ruta {
     ArrayList<String> barriosComunaOriental = new ArrayList<>();
     ArrayList<String> barriosComunaSurOriental = new ArrayList<>();
     ArrayList<String> barriosComunaSurOccidental = new ArrayList<>();
-    public RutaUrbana() {
+
+
+    public RutaUrbana(){
+
     }
+
+    public RutaUrbana(String nombre, String rutaInicio, String rutaFinal, String tiempoEstimado, String informacion, String costo) {
+        super(nombre, rutaInicio, rutaFinal, tiempoEstimado, informacion,costo);
+    }
+
 
     public void nombreComunas(){
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
@@ -30,19 +34,23 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<comunas.size(); i++){
             System.out.println((i+1)+": "+comunas.get(i));
         }
-
+        System.out.println("-->");
     }
 
 
     public void nombreBarrioComunaCentro(){
+        System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaCentro.add("Potosi");
         barriosComunaCentro.add("luxemburgo");
         barriosComunaCentro.add("Galeria");
         for (int i=0; i<barriosComunaCentro.size(); i++){
             System.out.println((i+1)+": "+barriosComunaCentro.get(i));
         }
+        System.out.println("-->");
+
     }
     public void nombreBarrioComunaNorte(){
+        System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaNorte.add("Gaitan");
         barriosComunaNorte.add("La Cabaña");
         barriosComunaNorte.add("El Eden");
@@ -51,8 +59,10 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaNorte.size(); i++){
             System.out.println((i+1)+": "+barriosComunaNorte.get(i));
         }
+        System.out.println("-->");
     }
     public void nombreBarrioComunaOccidental(){
+        System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaOccidental.add("San Mateo");
         barriosComunaOccidental.add("Manila");
         barriosComunaOccidental.add("convoy");
@@ -61,18 +71,22 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaOccidental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaOccidental.get(i));
         }
+        System.out.println("-->");
     }
     public void nombreBarriosComunaOriental(){
+        System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaOriental.add("Pekin");
         barriosComunaOriental.add("Coburgo");
         barriosComunaOriental.add("Bonet");
         barriosComunaOriental.add("Sauces");
-        for (int i=0; i<barriosComunaOriental.size(); i++){
-            System.out.println((i+1)+": "+barriosComunaOriental.get(i));
+        for (int i=0; i < barriosComunaOriental.size(); i++){
+            System.out.println((i+1)+": " + barriosComunaOriental.get(i));
         }
+        System.out.println("-->");
     }
 
     public void nombreBarriosComunaSurOccidente(){
+        System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaSurOccidental.add("llano largo");
         barriosComunaSurOccidental.add("La Pampa");
         barriosComunaSurOccidental.add("Coviproof");
@@ -84,9 +98,11 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaSurOccidental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaSurOccidental.get(i));
         }
+        System.out.println("-->");
     }
     public void nombreBarriosComunaSurOriente(){
-        barriosComunaSurOriental.add("Barmoral");
+        System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaSurOriental.add("Balmoral");
         barriosComunaSurOriental.add("Fusacatan");
         barriosComunaSurOriental.add("La Macarena");
         barriosComunaSurOriental.add("El Vergel");
@@ -95,9 +111,11 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaSurOriental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaSurOriental.get(i));
         }
+        System.out.println("-->");
     }
 
     public static Integer validarCase(Integer opcionComuna){
+        System.out.print("****Elija un barrio de esta Comuna: ****");
         Scanner teclado = new Scanner(System.in);
         if (opcionComuna>=6 || opcionComuna<=0){
             while (opcionComuna>=6 || opcionComuna<=0){
@@ -107,7 +125,7 @@ public class RutaUrbana extends Ruta {
         }
         return opcionComuna;
     }
-    public void mostrarInfoRutas(){
+    public void mostrarInfoRuta(){
 
     }
     public void barrioComuna(){
@@ -117,10 +135,9 @@ public class RutaUrbana extends Ruta {
         if (opcionComuna>=6 || opcionComuna<=0){
             opcionComuna= validarCase(opcionComuna);
         }
-        switch (opcionComuna){
+        switch (opcionComuna) {
             case 1:
                 nombreBarrioComunaCentro();
-
                 break;
             case 2:
                 nombreBarrioComunaNorte();

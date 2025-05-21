@@ -1,22 +1,19 @@
+public class RutaGranColombia extends RutaUrbana {
 
-public class RutaGrancolombia extends RutaUrbana {
-    public RutaGrancolombia(){
-        super ("gran colombia","Ebenezer", "San Antonio","Tiempo estimado 15 min a 20 min ");
+    public RutaGranColombia(){
+            super("Gran Colombia", "Ebenezer", "San Antonio", "Tiempo estimado 15 min a 20 min ", "Panamericana el indio, Escuela policia", "$2.300");
+        }
+
+        @Override
+        public void mostrarInfoRuta(){
+            System.out.println(" Ruta Urbana:" + getNombre());
+            System.out.println(" Paraderos: " + getRutaInicio() + getRutaFinal() );
+            System.out.println(" Frecuencia estimada: " + getTiempoEstimado());
+            System.out.println(" Información: " + getInformacion());
+            System.out.println(" Costo: " + getCosto());
+        }
 
     }
-    @Override
-
-    public void mostrarinfoRuta(){
-        System.out.println("Ruta Urbana: gran colombia");
-        System.out.println("Paraderos: Ebenezer, san Antonio");
-        System.out.println("tiempo estimado 15 min a 20 min ");
-        System.out.println("esta ruta hace un recorrido por: panamericana el indio, Escuela policia, hospital, Avenida las Plamas, puente del aguila");
-        System.out.println("costo: $2.400");
-    }
-
-}
-
-
 
 
 

@@ -4,14 +4,11 @@ import java.util.Scanner;
 public class Usuario {
 
     //Atributos
-    protected String nombre;
-    protected String cedula;
-    protected Integer edad;
-    protected String contraseña;
-
-
-
-    private String barrioDeResidencia;
+    String nombre;
+    String cedula;
+    Integer edad;
+    String contraseña;
+    String barrioDeResidencia;
     ArrayList<String> destinosFrecuentes;
 
     //Constructores

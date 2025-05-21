@@ -1,13 +1,16 @@
 public class RutaPampa extends RutaUrbana {
-    public RutaPampa(){
-        super ("La Pampa","Los Girasoles ","El Gaitan","Tiempo estimado 20 min a 30 min");
+
+    public RutaPampa() {
+        super("La Pampa","Los Girasoles","El Gaitan","*** 20 - 30 min***","Indio, Avenida las Palmas"," $2.400 ");
 
     }
-    @Override
 
-    public void mostrarinfoRuta(){
-        System.out.println("Ruta Urbana: La Pampa");
-        System.out.println("Paraderos: Pampa Los Girasoles, El gaitan");
-        System.out.println("tiempo estimado 20 min a 30 min ");
-        System.out.println("esta ruta hace un recorrido por: panamericana el indio, hospital, Avenida las Palmas, puente del aguila");
-        System.out.println("costo: $2.400");
+    @Override
+    public void mostrarInfoRuta() {
+        System.out.println(" Ruta Urbana:"  + getNombre());
+        System.out.println(" Paraderos: "           + getRutaInicio() + " --> " + getRutaFinal());
+        System.out.println(" Frecuencia estimada: "   + getTiempoEstimado());
+        System.out.println(" Información: "         +getInformacion());
+        System.out.println(" Costo: "             +getCosto());
+    }
+}
