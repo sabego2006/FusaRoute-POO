@@ -69,9 +69,14 @@ public class SistemaTransporte {
         rutasUrbanas.add(new RutaSanFernando());
         rutasUrbanas.add(new RutaStaMariaLosAngeles());
     }
+    public void inicializarRutas() {
+        inicializarRutasUrbanas();
+        inicializarRutasInterMunicipales();
+    }
+
+
 
     public void mostrarRutaPorComuna(int opcionComuna) {
-        inicializarRutasUrbanas();
         RutaUrbana ruta = new RutaUrbana();
         switch (opcionComuna) {
             case 1:
@@ -139,7 +144,7 @@ public class SistemaTransporte {
     }
 
     public void menuMostrarRutaIntermunicipal() {
-        inicializarRutasInterMunicipales();
+
         if (rutasInterMunicipales.isEmpty()) {
             System.out.println("No hay rutas intermunicipales registradas.");
             return;
@@ -175,7 +180,7 @@ public class SistemaTransporte {
             case 1:
                 rutaUrbana.nombreComunas();
                 rutaUrbana.barrioComuna();
-                //mostrarRutaPorComuna(opcionRuta);
+                mostrarRutaPorComuna(opcionRuta);
                 break;
             case 2:
                 menuMostrarRutaIntermunicipal();
@@ -197,10 +202,11 @@ public class SistemaTransporte {
         System.out.println("------------------");
         switch (opcionMenu) {
             case 1:
-                iniciarSesionUsario();
+                iniciarSesionUsuario();
                 break;
             case 2:
                 registrarUsuario();
+                escogerTipodeRuta();
                 break;
             case 3:
                 break;
@@ -224,7 +230,7 @@ public class SistemaTransporte {
         usuarios.add(usuario);
     }
 
-    public void iniciarSesionUsario() {
+    public void iniciarSesionUsuario() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("----------------------------------");
         System.out.println("Iniciar sesión");

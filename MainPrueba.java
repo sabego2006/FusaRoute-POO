@@ -22,6 +22,8 @@ Scanner teclado = new Scanner(System.in);
         Integer opcionSistema = 0;
         Scanner teclado = new Scanner(System.in);
 
+
+
         System.out.println("¡BIENVENIDO A FUSAROUTE! \n A continuación lo llevaremos a nuestro menú ");
         System.out.println("----------------------------------------------------------------------");
         System.out.println("Por favor escoja una opcion :");
@@ -29,12 +31,13 @@ Scanner teclado = new Scanner(System.in);
                 "2: registrar usuario \n"+
                 "3: Salir");
         System.out.println("----------------------------------------------------------------------");
-
+        System.out.print("-->");
         Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
 
         switch (opcionMenu){
             case 1:
-                sistemaTransporte.iniciarSesionUsario();
+                sistemaTransporte.iniciarSesionUsuario();
+
                 break;
             case 2:
                  sistemaTransporte.registrarUsuario();

@@ -8,8 +8,8 @@ public class RutaSilvania extends RutaInterMunicipal {
         System.out.println("Ruta Urbana:" + getNombre());
         System.out.println("Paraderos: " + getRutaInicio() + " --> " + getRutaFinal());
         System.out.println("Frecuencia Ruta: " + getTiempoEstimado());
-        System.out.println("esta ruta hace un recorrido por: "+getInformacion());
-        System.out.println("costo: $2.400 "+getCosto());
+        System.out.println("Información: "+getInformacion());
+        System.out.println("costo: " + getCosto());
 
     }
 }

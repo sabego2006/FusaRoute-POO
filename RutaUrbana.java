@@ -34,7 +34,8 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<comunas.size(); i++){
             System.out.println((i+1)+": "+comunas.get(i));
         }
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
     }
 
 
@@ -47,7 +48,8 @@ public class RutaUrbana extends Ruta {
             System.out.println((i+1)+": "+barriosComunaCentro.get(i));
         }
         Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
 
     }
     public void nombreBarrioComunaNorte(){
@@ -62,7 +64,8 @@ public class RutaUrbana extends Ruta {
             System.out.println((i+1)+": "+barriosComunaNorte.get(i));
         }
         Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
     }
     public void nombreBarrioComunaOccidental(){
         System.out.println("****Elija un barrio de esta Comuna: ****");
@@ -74,7 +77,8 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaOccidental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaOccidental.get(i));
         }
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
     }
     public void nombreBarriosComunaOriental(){
         System.out.println("****Elija un barrio de esta Comuna: ****");
@@ -85,7 +89,8 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i < barriosComunaOriental.size(); i++){
             System.out.println((i+1)+": " + barriosComunaOriental.get(i));
         }
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
     }
 
     public void nombreBarriosComunaSurOccidente(){
@@ -101,7 +106,8 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaSurOccidental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaSurOccidental.get(i));
         }
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
     }
     public void nombreBarriosComunaSurOriente(){
         System.out.println("****Elija un barrio de esta Comuna: ****");
@@ -115,7 +121,8 @@ public class RutaUrbana extends Ruta {
             System.out.println((i+1)+": "+barriosComunaSurOriental.get(i));
         }
         Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
-        System.out.println("-->");
+        System.out.println("");
+        System.out.print("-->");
 
     }
 
