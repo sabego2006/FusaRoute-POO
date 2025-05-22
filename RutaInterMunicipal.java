@@ -2,14 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RutaInterMunicipal extends Ruta{
-    //Hereda los atributos de su papa
-
-
-
-
-
     public  RutaInterMunicipal(){
-
     }
 
     public RutaInterMunicipal(String nombre, String rutaInicio, String rutaFinal, String tiempoEstimado, String informacion, String costo) {
@@ -17,7 +10,6 @@ public class RutaInterMunicipal extends Ruta{
     }
 
     public void mostrarInfoRuta() {
-
     }
 
 
@@ -36,17 +28,17 @@ public class RutaInterMunicipal extends Ruta{
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escoge una opcion: ");
         Integer opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
-        if (opcionComuna >= 6 || opcionComuna <= 0) {
+        if (opcionComuna > 6 || opcionComuna <= 0) {
             opcionComuna = validarCase(opcionComuna);
         }
         switch (opcionComuna) {
             case 1:
-                RutaPasca rutaPasca = new RutaPasca();
-                rutaPasca.mostrarInfoRuta();
+                RutaNovillero rutaNovillero = new RutaNovillero();
+                rutaNovillero.mostrarInfoRuta();
                 break;
             case 2:
-                RutaArbelaez rutaArbelaez = new RutaArbelaez();
-                rutaArbelaez.mostrarInfoRuta();
+                RutaPasca rutaPasca = new RutaPasca();
+                rutaPasca.mostrarInfoRuta();
                 break;
             case 3:
                 RutaChinauta rutaChinauta = new RutaChinauta();
@@ -56,9 +48,9 @@ public class RutaInterMunicipal extends Ruta{
                 RutaSilvania rutaSilvania = new RutaSilvania();
                 rutaSilvania.mostrarInfoRuta();
                 break;
-            case 6:
-                RutaNovillero rutaNovillero = new RutaNovillero();
-                rutaNovillero.mostrarInfoRuta();
+            case 5:
+                RutaArbelaez rutaArbelaez = new RutaArbelaez();
+                rutaArbelaez.mostrarInfoRuta();
                 break;
             default:
                 System.out.println("opcion invalido, vuelvelo a intentarlo");

@@ -18,10 +18,6 @@ Scanner teclado = new Scanner(System.in);
 
 
     public static void main(String[] args) {
-        Administrador administrador = new Administrador();
-        administrador.setNombre("pepe");
-        RutaUrbana rutitaUrbanita = new RutaUrbana();
-        RutaInterMunicipal rutitaInMunicipal = new RutaInterMunicipal();
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
         Integer opcionSistema = 0;
         Scanner teclado = new Scanner(System.in);
@@ -48,7 +44,5 @@ Scanner teclado = new Scanner(System.in);
             case 3:
                 break;
         }
-     sistemaTransporte.mostrarUsuario();
-        sistemaTransporte.mostrarDestinosConFrecuencia();
     }
 }

@@ -4,27 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3177d374-be37-48df-bfe4-6b1990088509" name="Changes" comment="">
+    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales">
       <change beforePath="$PROJECT_DIR$/MainPrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainPrueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ruta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ruta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaArbelaez.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaArbelaez.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaChinauta.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaChinauta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaGranColombia.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RutaInterMunicipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaInterMunicipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaNovillero.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaNovillero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaPasca.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaPasca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaUrbana.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaUrbana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.java" afterDir="false" />
-    </list>
-    <list id="ea9d785f-c26a-4be5-9b47-c7c1a4ea3b59" name="Changes by PC" comment="" />
-    <list id="aed1f8b2-d0bf-4b31-a1d9-b19e80433d0c" name="Changes by Santiago" comment="">
-      <change beforePath="$PROJECT_DIR$/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Administrador.java" afterDir="false" />
-    </list>
-    <list id="75b6efd9-62f0-4af0-8468-09654a2de153" name="Changes by Usuario" comment="">
-      <change beforePath="$PROJECT_DIR$/RutaArbelaez.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaArbelaez.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaPampa.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaPampa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaSanFernando.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaSanFernando.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaSilvania.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaSilvania.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SistemaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaTransporte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,55 +27,34 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;alejandroAvila30&quot;
+    &quot;assignee&quot;: &quot;andrezzzsecso027&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sabego2006/FusaRoute-POO.git&quot;,
-    &quot;accountId&quot;: &quot;f5be44a4-ef27-41ee-a0a0-175776a04180&quot;
+    &quot;accountId&quot;: &quot;8b88dacf-dab4-49d1-a6b2-29a2638fe51f&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/RutaArbelaez.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="3177d374-be37-48df-bfe4-6b1990088509" />
-        <range start1="7" end1="12" start2="7" end2="12" changelist="75b6efd9-62f0-4af0-8468-09654a2de153" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2x8rBkOIdQuWY8YlKDhPyf7gTRc" />
+  <component name="ProjectId" id="2x8rzRhvwwfIf9Kfm4KnneEEwVQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.FusaRouteMain.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainPrueba.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MainPrueba">
-    <configuration name="FusaRouteMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FusaRouteMain" />
-      <module name="FusaRoute-POO" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="MainPrueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainPrueba" />
       <module name="FusaRoute-POO" />
@@ -104,125 +65,204 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainPrueba" />
-        <item itemvalue="Application.FusaRouteMain" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3177d374-be37-48df-bfe4-6b1990088509" name="Changes" comment="" />
-      <created>1747330409062</created>
+      <changelist id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="" />
+      <created>1747330804223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1747330409062</updated>
-      <workItem from="1747330418707" duration="265000" />
-      <workItem from="1747330725444" duration="470000" />
-      <workItem from="1747351508255" duration="7395000" />
-      <workItem from="1747427578929" duration="1443000" />
-      <workItem from="1747674946021" duration="1700000" />
-      <workItem from="1747676693308" duration="8897000" />
-      <workItem from="1747701681857" duration="429000" />
-      <workItem from="1747754589227" duration="176000" />
-      <workItem from="1747755165458" duration="21632000" />
-      <workItem from="1747830004306" duration="2428000" />
-      <workItem from="1747833373512" duration="2829000" />
-      <workItem from="1747838873124" duration="1212000" />
+      <updated>1747330804223</updated>
     </task>
-    <task id="LOCAL-00001" summary="creé una variable amiguitos">
+    <task id="LOCAL-00001" summary="creacion de clase administrador">
       <option name="closed" value="true" />
-      <created>1747331619995</created>
+      <created>1747332786636</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1747331619995</updated>
+      <updated>1747332786636</updated>
     </task>
-    <task id="LOCAL-00002" summary="creé sub clase de ruta urbana">
+    <task id="LOCAL-00002" summary="atributo contraseña">
       <option name="closed" value="true" />
-      <created>1747678349044</created>
+      <created>1747332967099</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1747678349044</updated>
+      <updated>1747332967099</updated>
     </task>
-    <task id="LOCAL-00003" summary="creé sub clase de ruta urbana">
+    <task id="LOCAL-00003" summary="Contructores y metodo mostrar info">
       <option name="closed" value="true" />
-      <created>1747678412823</created>
+      <created>1747333281588</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1747678412823</updated>
+      <updated>1747333281588</updated>
     </task>
-    <task id="LOCAL-00004" summary="se elimino la sub clase">
+    <task id="LOCAL-00004" summary="get y set de contraseña, constructor actualizado">
       <option name="closed" value="true" />
-      <created>1747681523643</created>
+      <created>1747333472861</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1747681523643</updated>
+      <updated>1747333472861</updated>
     </task>
-    <task id="LOCAL-00005" summary="se realizo metodo mostrar informacion">
+    <task id="LOCAL-00005" summary="wow">
       <option name="closed" value="true" />
-      <created>1747683652402</created>
+      <created>1747333982725</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1747683652402</updated>
+      <updated>1747333982725</updated>
     </task>
-    <task id="LOCAL-00006" summary="se realizo metodo mostrar informacion">
+    <task id="LOCAL-00006" summary="parsee la variable opcion">
       <option name="closed" value="true" />
-      <created>1747760784244</created>
+      <created>1747345756691</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1747760784244</updated>
+      <updated>1747345756692</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="puse un main de prueba de la clase rutaUrbana, cree un Arraylist por comunas, la funcion de mostar sus nombres, y varios ArrayList por cada comuna los nombres de sus barrios">
+      <option name="closed" value="true" />
+      <created>1747348627709</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747348627709</updated>
+    </task>
+    <task id="LOCAL-00008" summary="funcionalidad de escoger y arrays por comuna">
+      <option name="closed" value="true" />
+      <created>1747349727543</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747349727543</updated>
+    </task>
+    <task id="LOCAL-00009" summary="funcionalidad de escoger y arrays por comuna">
+      <option name="closed" value="true" />
+      <created>1747349957010</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747349957010</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Funcion case que permite validar que el usuario meta el numero correcto, termine de darle a cada comuna su barrio">
+      <option name="closed" value="true" />
+      <created>1747353527829</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747353527829</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Funcion case que permite validar que el usuario meta el numero correcto, termine de darle a cada comuna su barrio">
+      <option name="closed" value="true" />
+      <created>1747356549552</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747356549552</updated>
+    </task>
+    <task id="LOCAL-00012" summary="clase rutaintermunicipal fue modificado para mostrar los nombres en el main, donde se le pide al ususario que ingrese un opcion">
+      <option name="closed" value="true" />
+      <created>1747357250896</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747357250896</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Pruebas">
+      <option name="closed" value="true" />
+      <created>1747409029327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747409029327</updated>
+    </task>
+    <task id="LOCAL-00014" summary="metodo de registrar usuario y opcion de menu">
+      <option name="closed" value="true" />
+      <created>1747410411286</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747410411286</updated>
+    </task>
+    <task id="LOCAL-00015" summary="iniciar sesion usuario e administrador, y sañor, mostrar ususarios registrados">
+      <option name="closed" value="true" />
+      <created>1747427251676</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1747427251676</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Hice varias pruebas, hice la prueba de mostrar info de los ususarios, la funcion de mostrarle el paradero a la ruta intermunicipal">
+      <option name="closed" value="true" />
+      <created>1747605404895</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1747605404895</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Hice varias pruebas, hice la prueba de mostrar info de los ususarios, la funcion de mostrarle el paradero a la ruta intermunicipal">
+      <option name="closed" value="true" />
+      <created>1747674494663</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1747674494663</updated>
+    </task>
+    <task id="LOCAL-00018" summary="while para no dejar caer el sistema">
+      <option name="closed" value="true" />
+      <created>1747677262361</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1747677262361</updated>
+    </task>
+    <task id="LOCAL-00019" summary="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales">
+      <option name="closed" value="true" />
+      <created>1747678046623</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1747678046623</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creé una variable amiguitos" />
-    <MESSAGE value="creé sub clase de ruta urbana" />
-    <MESSAGE value="se elimino la sub clase" />
-    <MESSAGE value="se realizo metodo mostrar informacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="se realizo metodo mostrar informacion" />
+    <MESSAGE value="creacion de clase administrador" />
+    <MESSAGE value="atributo contraseña" />
+    <MESSAGE value="Contructores y metodo mostrar info" />
+    <MESSAGE value="get y set de contraseña, constructor actualizado" />
+    <MESSAGE value="wow" />
+    <MESSAGE value="parsee la variable opcion" />
+    <MESSAGE value="puse un main de prueba de la clase rutaUrbana, cree un Arraylist por comunas, la funcion de mostar sus nombres, y varios ArrayList por cada comuna los nombres de sus barrios" />
+    <MESSAGE value="funcionalidad de escoger y arrays por comuna" />
+    <MESSAGE value="Funcion case que permite validar que el usuario meta el numero correcto, termine de darle a cada comuna su barrio" />
+    <MESSAGE value="clase rutaintermunicipal fue modificado para mostrar los nombres en el main, donde se le pide al ususario que ingrese un opcion" />
+    <MESSAGE value="Pruebas" />
+    <MESSAGE value="metodo de registrar usuario y opcion de menu" />
+    <MESSAGE value="iniciar sesion usuario e administrador, y sañor, mostrar ususarios registrados" />
+    <MESSAGE value="Hice varias pruebas, hice la prueba de mostrar info de los ususarios, la funcion de mostrarle el paradero a la ruta intermunicipal" />
+    <MESSAGE value="while para no dejar caer el sistema" />
+    <MESSAGE value="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales" />
+    <option name="LAST_COMMIT_MESSAGE" value="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/MainPrueba.java</url>
-          <line>3</line>
-          <properties field="teclado" class="MainPrueba" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MainPrueba.java</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/FusaRouteMain.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

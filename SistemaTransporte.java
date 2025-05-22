@@ -4,7 +4,7 @@ import java.util.Scanner;
 // clase principal
 public class SistemaTransporte {
 
-    Administrador administrador = new Administrador("Frank Ortegon","123456789",26,"solo_udec");
+    Administrador administrador = new Administrador("Frank Ortegon","123",26,"udec");
     Usuario usuario = new Usuario();
     Scanner teclado = new Scanner(System.in);
     ArrayList<Usuario> usuarios = new ArrayList<>();
@@ -12,9 +12,21 @@ public class SistemaTransporte {
     ArrayList<RutaInterMunicipal> rutasInterMunicipales = new ArrayList<>();
     ArrayList<String> destinosFrecuentes = new ArrayList<>();
     ArrayList<Integer> frecuenciaDestinos = new ArrayList<>();
-
+    RutaUrbana rutaUrbana = new RutaUrbana();
+    RutaInterMunicipal rutaInterMunicipal = new RutaInterMunicipal();
+    //Contructor vacio
     public SistemaTransporte() {
+    }
 
+    static Integer validarCase(Integer opcionRuta) {
+        Scanner teclado = new Scanner(System.in);
+        if (opcionRuta > 2 || opcionRuta <= 0) {
+            while (opcionRuta > 2 || opcionRuta <= 0) {
+                System.out.println(", vuelelo a intentar");
+                opcionRuta = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+            }
+        }
+        return opcionRuta;
     }
 
     //Métodos:
@@ -47,7 +59,7 @@ public class SistemaTransporte {
         rutasInterMunicipales.add(new RutaPasca());
         rutasInterMunicipales.add(new RutaChinauta());
         rutasInterMunicipales.add(new RutaSilvania());
-        rutasInterMunicipales.add(new RutaNovillero());
+        rutasInterMunicipales.add(new RutaArbelaez());
     }
 
     public void inicializarRutasUrbanas() {
@@ -57,14 +69,12 @@ public class SistemaTransporte {
         rutasUrbanas.add(new RutaSanFernando());
         rutasUrbanas.add(new RutaStaMariaLosAngeles());
     }
-//cambio aqui
 
     public void mostrarRutaPorComuna(int opcionComuna) {
         inicializarRutasUrbanas();
         RutaUrbana ruta = new RutaUrbana();
         switch (opcionComuna) {
             case 1:
-
                 ruta = new RutaCentroTerminal();
                 agregarDestino("RutaCentroTerminal");
                 break;
@@ -96,49 +106,39 @@ public class SistemaTransporte {
         System.out.println("\n=== Ruta recomendada para esta comuna ===");
         ruta.mostrarInfoRuta();
     }
-    public void mostrarRutaRecomendada(){
 
-    }
-    public void iniciarSesionUsuario() {
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("==== INICIO DE SESIÓN ====");
-
-        System.out.print("Ingrese su cédula: ");
-        String cedula = teclado.nextLine().trim();
-
-        System.out.print("Ingrese su contraseña: ");
-        String contraseña = teclado.nextLine().trim();
-
-        if (administrador.getCedula().equals(cedula) && administrador.getContraseña().equals(contraseña)) {
-            System.out.println("✅ Bienvenido Administrador: " + administrador.getNombre());
-            menuAdmin();
-        } else {
-            System.out.println("❌ Cédula o contraseña incorrecta. Acceso denegado.");
-        }
-    }
     public void menuAdmin() {
-        System.out.println("===== MENÚ ADMINISTRADOR =====");
-        System.out.println("1. Ver usuarios registrados");
-        System.out.println("2. Ver estadísticas de rutas");
-        System.out.println("3. Salir");
+        Integer opcionz=0;
+        while (opcionz!=2){
+            Scanner teclado = new Scanner(System.in);
+            System.out.println("===== MENÚ ADMINISTRADOR =====");
+            System.out.println("1. Ver usuarios registrados");
+            System.out.println("2. Ver estadísticas de rutas");
+            System.out.println("3. Salir Sesion");
 
-        int opcion = Integer.parseInt(teclado.nextLine());
+            int opcion = Integer.parseInt(teclado.nextLine());
 
-        switch (opcion) {
-            case 1:
-                mostrarUsuario();
-                break;
-            case 2:
-                mostrarDestinosConFrecuencia();
-                break;
-            case 3:
-                break;
-            default:
-                System.out.println("Opción inválida.");
+            switch (opcion) {
+                case 1:
+                    mostrarUsuario();
+                    break;
+                case 2:
+                    mostrarDestinosConFrecuencia();
+                    break;
+                case 3:
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
+            System.out.println("desea realizar otra opcion? \n 1: si " +
+                    "\n 2: no");
+            opcionz = (int) Double.parseDouble(teclado.next());
         }
+        salirOnoSistema();
+
     }
 
-    public void menuMostrarRutaIntermunicipal(Scanner teclado) {
+    public void menuMostrarRutaIntermunicipal() {
         inicializarRutasInterMunicipales();
         if (rutasInterMunicipales.isEmpty()) {
             System.out.println("No hay rutas intermunicipales registradas.");
@@ -149,34 +149,22 @@ public class SistemaTransporte {
         for (int i = 0; i < rutasInterMunicipales.size(); i++) {
             System.out.println((i+1) + ". " + rutasInterMunicipales.get(i).getNombre());
         }
-
-        System.out.print("Seleccione una ruta: ");
-        int opcion = teclado.nextInt();
-        teclado.nextLine();
-
-        if (opcion >= 0 && opcion < rutasInterMunicipales.size()) {
-            RutaInterMunicipal ruta = rutasInterMunicipales.get(opcion);
-            ruta.mostrarInfoRuta(); // 🔥 POLIMORFISMO aquí
-        } else {
-            System.out.println("Opción inválida.");
-        }
+//
+//        System.out.print("Seleccione una ruta: ");
+//        int opcion = teclado.nextInt();
+//        teclado.nextLine();
+//
+//        if (opcion >= 0 && opcion < rutasInterMunicipales.size()) {
+//            RutaInterMunicipal ruta = rutasInterMunicipales.get(opcion);
+//            ruta.mostrarInfoRuta(); // 🔥 POLIMORFISMO aquí
+//        } else {
+//            System.out.println("Opción inválida.");
+//        }
     }
 
 
-    static Integer validarCase(Integer opcionRuta) {
-        Scanner teclado = new Scanner(System.in);
-        if (opcionRuta > 2 || opcionRuta <= 0) {
-            while (opcionRuta > 2 || opcionRuta <= 0) {
-                System.out.println(", vuelelo a intentar");
-                opcionRuta = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
-            }
-        }
-        return opcionRuta;
-    }
 
     public void escogerTipodeRuta() {
-        RutaUrbana rutaUrbana = new RutaUrbana();
-        RutaInterMunicipal rutaInterMunicipal = new RutaInterMunicipal();
         Scanner teclado = new Scanner(System.in);
         System.out.println("tipos de ruta \n 1: urbana \n 2: intermunicipal");
         Integer opcionRuta = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
@@ -187,12 +175,11 @@ public class SistemaTransporte {
             case 1:
                 rutaUrbana.nombreComunas();
                 rutaUrbana.barrioComuna();
-                String barrioElegido = teclado.next();
-                mostrarRutaPorComuna(opcionRuta);
-
+                //mostrarRutaPorComuna(opcionRuta);
                 break;
             case 2:
-                menuMostrarRutaIntermunicipal(teclado);
+                menuMostrarRutaIntermunicipal();
+                rutaInterMunicipal.mostrarInforRutasIntermunicipal();
                 inicializarRutasInterMunicipales();
                 break;
         }
@@ -204,9 +191,10 @@ public class SistemaTransporte {
         System.out.println("----------------------------------------------------------------------");
         System.out.println("1: iniciar sesion \n" +
                 "2: registrar usuario \n" +
-                "3: Salir");
+                "3: Salir de la sesion ");
         System.out.println("escoge una opcion :");
         Integer opcionMenu = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+        System.out.println("------------------");
         switch (opcionMenu) {
             case 1:
                 iniciarSesionUsario();
@@ -223,21 +211,22 @@ public class SistemaTransporte {
         Scanner teclado = new Scanner(System.in);
         Usuario usuario = new Usuario();
         System.out.println("vamos a registrar su usuario ");
-        System.out.println("ingrese su nombre ");
+        System.out.print("ingrese su nombre: ");
         usuario.setNombre(teclado.next());
-        System.out.println("ingrese su documento de identidad ");
+        System.out.print("ingrese su documento de identidad: ");
         usuario.setCedula(teclado.next());
-        System.out.println("ingrese su edad ");
+        System.out.print("ingrese su edad: ");
         usuario.setEdad(teclado.nextInt());
-        System.out.println("Ingresa una contraseña ");
+        System.out.print("Ingrese una contraseña: ");
         usuario.setContraseña(teclado.next());
-        System.out.println("ingresa tu barrio de residencia ");
+        System.out.print("ingresa tu barrio de residencia: ");
         usuario.setBarrioDeResidencia(teclado.next());
         usuarios.add(usuario);
     }
 
     public void iniciarSesionUsario() {
         Scanner teclado = new Scanner(System.in);
+        System.out.println("----------------------------------");
         System.out.println("Iniciar sesión");
 
         System.out.print("Ingrese su cédula: ");
@@ -245,20 +234,22 @@ public class SistemaTransporte {
 
         System.out.print("Ingrese su contraseña: ");
         String contraseña = teclado.nextLine().trim();
-
         boolean encontrado = false;
-
         for (Usuario usuario : usuarios) {
             if (usuario.getCedula().equals(cedula) && usuario.getContraseña().equals(contraseña)) {
-                System.out.println("¡Bienvenido/a " + usuario.getNombre() + "!!!");
+                System.out.println("Bienvenido "+usuario.getNombre());
+                menuUsuario();
                 encontrado = true;
                 break;
             }
         }
-
-        if (!encontrado) {
-            System.out.println("⚠️ Cédula o contraseña incorrecta ⚠️. Inténtelo nuevamente.");
+        if (administrador.getCedula().equals(cedula) && administrador.getContraseña().equals(contraseña)) {
+            System.out.println("✅ Bienvenido Administrador: " + administrador.getNombre());
+            menuAdmin();
+        } else if (administrador.getCedula().equals(cedula)!=administrador.getContraseña().equals(contraseña) && !encontrado ) {
+            System.out.println("❌ Cédula o contraseña incorrecta. Acceso denegado.");
         }
+
     }
 
     public void salirOnoSistema() {
@@ -271,8 +262,6 @@ public class SistemaTransporte {
             switch (opcionSistema) {
                 case 1:
                     menuInicio();
-                    menuUsuario();
-
                     break;
                 case 2:
                     break;
@@ -299,11 +288,11 @@ public class SistemaTransporte {
 
     public void menuUsuario() {
         Scanner teclado = new Scanner(System.in);
-        Usuario ultimo = usuarios.get(usuarios.size() - 1);
-        System.out.println("¡Bienvenido/a " +  ultimo.getNombre() + "!");
+        //Usuario ultimo = usuarios.get(usuarios.size() - 1);
+        //System.out.println("¡Bienvenido/a " +  ultimo.getNombre() + "!");
 
         System.out.println("1: iniciar ruta \n" +
-                "2: salir ");
+                "2: salir Sesion ");
         Integer opcion= (int)Double.parseDouble(teclado.next());
         switch (opcion){
             case 1:

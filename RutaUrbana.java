@@ -46,6 +46,7 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaCentro.size(); i++){
             System.out.println((i+1)+": "+barriosComunaCentro.get(i));
         }
+        Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
         System.out.println("-->");
 
     }
@@ -56,9 +57,11 @@ public class RutaUrbana extends Ruta {
         barriosComunaNorte.add("El Eden");
         barriosComunaNorte.add("Carlos Lleras");
         barriosComunaNorte.add("Villa Natalia");
+        barriosComunaNorte.add("San Antonio");
         for (int i=0; i<barriosComunaNorte.size(); i++){
             System.out.println((i+1)+": "+barriosComunaNorte.get(i));
         }
+        Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
         System.out.println("-->");
     }
     public void nombreBarrioComunaOccidental(){
@@ -111,7 +114,9 @@ public class RutaUrbana extends Ruta {
         for (int i=0; i<barriosComunaSurOriental.size(); i++){
             System.out.println((i+1)+": "+barriosComunaSurOriental.get(i));
         }
+        Integer opcionBarrio = (int)Double.parseDouble(teclado.next());
         System.out.println("-->");
+
     }
 
     public static Integer validarCase(Integer opcionComuna){
@@ -130,7 +135,8 @@ public class RutaUrbana extends Ruta {
     }
     public void barrioComuna(){
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Escoge una opcion: ");
+        SistemaTransporte sistemaTransporte = new SistemaTransporte();
+        System.out.println("Escoge unaa opcion: ");
         Integer opcionComuna=(int)Double.parseDouble(teclado.next().trim().replace(",","."));
         if (opcionComuna>=6 || opcionComuna<=0){
             opcionComuna= validarCase(opcionComuna);
@@ -138,18 +144,32 @@ public class RutaUrbana extends Ruta {
         switch (opcionComuna) {
             case 1:
                 nombreBarrioComunaCentro();
+                RutaCentroTerminal rutaCentroTerminal = new RutaCentroTerminal();
+                rutaCentroTerminal.mostrarInfoRuta();
+
                 break;
             case 2:
                 nombreBarrioComunaNorte();
+                RutaGranColombia rutaGranColombia = new RutaGranColombia();
+                rutaGranColombia.mostrarInfoRuta();
+
+                nombreBarrioComunaNorte();
+                RutaSanFernando rutaSanFernando = new RutaSanFernando();
+                rutaSanFernando.mostrarInfoRuta();
+
+
                 break;
             case 3:
                 nombreBarrioComunaOccidental();
+
                 break;
             case 4:
                 nombreBarriosComunaOriental();
+
                 break;
             case 5:
                 nombreBarriosComunaSurOccidente();
+
                 break;
             case 6:
                 nombreBarriosComunaSurOriente();

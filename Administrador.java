@@ -12,6 +12,8 @@ public class Administrador extends Usuario {
         this.contraseña = contraseña;
     }
 
+
+
     @Override
     public void mostrarInfo() {
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
