@@ -243,17 +243,19 @@ public class SistemaTransporte {
         boolean encontrado = false;
         for (Usuario usuario : usuarios) {
             if (usuario.getCedula().equals(cedula) && usuario.getContraseña().equals(contraseña)) {
-                System.out.println("Bienvenido "+usuario.getNombre());
+                System.out.println("Bienvenido " + usuario.getNombre());
                 menuUsuario();
                 encontrado = true;
-                break;
+
+            } else {
+                System.out.println("");
             }
-        }
-        if (administrador.getCedula().equals(cedula) && administrador.getContraseña().equals(contraseña)) {
-            System.out.println("✅ Bienvenido Administrador: " + administrador.getNombre());
-            menuAdmin();
-        } else if (administrador.getCedula().equals(cedula)!=administrador.getContraseña().equals(contraseña) && !encontrado ) {
-            System.out.println("❌ Cédula o contraseña incorrecta. Acceso denegado.");
+            if (administrador.getCedula().equals(cedula) && administrador.getContraseña().equals(contraseña)) {
+                System.out.println("✅ Bienvenido Administrador: " + administrador.getNombre());
+                menuAdmin();
+            } else if (administrador.getCedula().equals(cedula) != administrador.getContraseña().equals(contraseña) && !encontrado) {
+                System.out.println("❌ Cédula o contraseña incorrecta. Acceso denegado.");
+            }
         }
 
     }

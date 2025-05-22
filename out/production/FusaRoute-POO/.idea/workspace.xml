@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales">
-      <change beforePath="$PROJECT_DIR$/MainPrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainPrueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RutaInterMunicipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaInterMunicipal.java" afterDir="false" />
+    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="varios cambios de Administrador" />
+    <list id="95603a81-cc47-44e9-982c-f7c0fb11a453" name="Changes by PC" comment="">
+      <change beforePath="$PROJECT_DIR$/RutaEden.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaEden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutaUrbana.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaUrbana.java" afterDir="false" />
+    </list>
+    <list id="b36e883e-2a98-4ff2-a093-28e2d056dbb4" name="Changes by Santiago" comment="">
       <change beforePath="$PROJECT_DIR$/SistemaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaTransporte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +54,8 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RunManager">
@@ -229,7 +233,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747678046623</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="varios cambios de Administrador">
+      <option name="closed" value="true" />
+      <created>1747932177699</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1747932177699</updated>
+    </task>
+    <task id="LOCAL-00021" summary="varios cambios de Administrador">
+      <option name="closed" value="true" />
+      <created>1747935999046</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1747935999046</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -249,7 +269,8 @@
     <MESSAGE value="Hice varias pruebas, hice la prueba de mostrar info de los ususarios, la funcion de mostrarle el paradero a la ruta intermunicipal" />
     <MESSAGE value="while para no dejar caer el sistema" />
     <MESSAGE value="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales" />
-    <option name="LAST_COMMIT_MESSAGE" value="main actualizado, y metodo para salir o no del sistema, muestra usuarios actuales" />
+    <MESSAGE value="varios cambios de Administrador" />
+    <option name="LAST_COMMIT_MESSAGE" value="varios cambios de Administrador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
