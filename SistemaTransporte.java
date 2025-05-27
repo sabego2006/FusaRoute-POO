@@ -54,13 +54,13 @@ public class SistemaTransporte {
 
 
 
-    public void inicializarRutasInterMunicipales() {
-        rutasInterMunicipales.add(new RutaNovillero());
-        rutasInterMunicipales.add(new RutaPasca());
-        rutasInterMunicipales.add(new RutaChinauta());
-        rutasInterMunicipales.add(new RutaSilvania());
-        rutasInterMunicipales.add(new RutaArbelaez());
-    }
+//    public void inicializarRutasInterMunicipales() {
+//        rutasInterMunicipales.add(new RutaNovillero());
+//        rutasInterMunicipales.add(new RutaPasca());
+//        rutasInterMunicipales.add(new RutaChinauta());
+//        rutasInterMunicipales.add(new RutaSilvania());
+//        rutasInterMunicipales.add(new RutaArbelaez());
+//    }
 
     public void inicializarRutasUrbanas() {
         rutasUrbanas.add(new RutaCentroTerminal());
@@ -71,7 +71,7 @@ public class SistemaTransporte {
     }
     public void inicializarRutas() {
         inicializarRutasUrbanas();
-        inicializarRutasInterMunicipales();
+        //inicializarRutasInterMunicipales();
     }
 
 
@@ -121,7 +121,7 @@ public class SistemaTransporte {
             System.out.println("2. Ver estadísticas de rutas");
             System.out.println("3. Salir Sesion");
 
-            int opcion = Integer.parseInt(teclado.nextLine());
+            Integer opcion = Integer.parseInt(teclado.nextLine());
 
             switch (opcion) {
                 case 1:
@@ -145,10 +145,10 @@ public class SistemaTransporte {
 
     public void menuMostrarRutaIntermunicipal() {
 
-        if (rutasInterMunicipales.isEmpty()) {
-            System.out.println("No hay rutas intermunicipales registradas.");
-            return;
-        }
+//        if (rutasInterMunicipales.isEmpty()) {
+//            System.out.println("No hay rutas intermunicipales registradas.");
+//            return;
+//        }
 
         System.out.println("=== RUTAS INTERMUNICIPALES ===");
         for (int i = 0; i < rutasInterMunicipales.size(); i++) {
@@ -183,9 +183,8 @@ public class SistemaTransporte {
                 mostrarRutaPorComuna(opcionRuta);
                 break;
             case 2:
-                menuMostrarRutaIntermunicipal();
+                rutaInterMunicipal.nombreRutasIntermunicipales();
                 rutaInterMunicipal.mostrarInforRutasIntermunicipal();
-                inicializarRutasInterMunicipales();
                 break;
         }
     }
@@ -216,6 +215,7 @@ public class SistemaTransporte {
     public void registrarUsuario() {
         Scanner teclado = new Scanner(System.in);
         Usuario usuario = new Usuario();
+
         System.out.println("vamos a registrar su usuario ");
         System.out.print("ingrese su nombre: ");
         usuario.setNombre(teclado.next());
@@ -225,8 +225,9 @@ public class SistemaTransporte {
         usuario.setEdad(teclado.nextInt());
         System.out.print("Ingrese una contraseña: ");
         usuario.setContraseña(teclado.next());
-        System.out.print("ingresa tu barrio de residencia: ");
-        usuario.setBarrioDeResidencia(teclado.next());
+        System.out.println("ingresa tu barrio de residencia: ");
+        rutaUrbana.nombreComunas();
+        rutaUrbana.barrioComuna();
         usuarios.add(usuario);
     }
 
@@ -248,8 +249,8 @@ public class SistemaTransporte {
                 encontrado = true;
 
             } else {
-                System.out.println("");
             }
+        }
             if (administrador.getCedula().equals(cedula) && administrador.getContraseña().equals(contraseña)) {
                 System.out.println("✅ Bienvenido Administrador: " + administrador.getNombre());
                 menuAdmin();
@@ -258,7 +259,7 @@ public class SistemaTransporte {
             }
         }
 
-    }
+
 
     public void salirOnoSistema() {
         Integer opcionSistema = 0;

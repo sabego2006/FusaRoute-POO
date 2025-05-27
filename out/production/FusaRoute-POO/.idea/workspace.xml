@@ -4,14 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="varios cambios de Administrador" />
-    <list id="95603a81-cc47-44e9-982c-f7c0fb11a453" name="Changes by PC" comment="">
-      <change beforePath="$PROJECT_DIR$/RutaEden.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaEden.java" afterDir="false" />
+    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="varios cambios de Administrador">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainPrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainPrueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutaChinauta.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaChinauta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutaInterMunicipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaInterMunicipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RutaUrbana.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaUrbana.java" afterDir="false" />
-    </list>
-    <list id="b36e883e-2a98-4ff2-a093-28e2d056dbb4" name="Changes by Santiago" comment="">
       <change beforePath="$PROJECT_DIR$/SistemaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaTransporte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/Administrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/Administrador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/FusaRouteMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/FusaRouteMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/MainPrueba.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/MainPrueba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/Ruta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/Ruta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaArbelaez.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaArbelaez.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaCentroTerminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaCentroTerminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaChinauta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaChinauta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaEden.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaEden.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaGranColombia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaGranColombia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaInterMunicipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaInterMunicipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaNovillero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaNovillero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaPampa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaPampa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaPasca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaPasca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaSanFernando.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaSanFernando.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaSilvania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaSilvania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaStaMariaLosAngeles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaStaMariaLosAngeles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaUrbana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaUrbana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/SistemaTransporte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/SistemaTransporte.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/Usuario.class" afterDir="false" />
     </list>
+    <list id="95603a81-cc47-44e9-982c-f7c0fb11a453" name="Changes by PC" comment="" />
+    <list id="b36e883e-2a98-4ff2-a093-28e2d056dbb4" name="Changes by Santiago" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +80,17 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Documents/GitHub/FusaRoute-POO&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager">
@@ -72,6 +107,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,6 +123,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747330804223</updated>
+      <workItem from="1748266979342" duration="4072000" />
+      <workItem from="1748291508635" duration="6645000" />
+      <workItem from="1748356320685" duration="2614000" />
     </task>
     <task id="LOCAL-00001" summary="creacion de clase administrador">
       <option name="closed" value="true" />
@@ -249,8 +295,19 @@
       <option name="project" value="LOCAL" />
       <updated>1747935999046</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="varios cambios de Administrador">
+      <option name="closed" value="true" />
+      <created>1747938205851</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1747938205857</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creacion de clase administrador" />

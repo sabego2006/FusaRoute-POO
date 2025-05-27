@@ -57,7 +57,7 @@ public class Usuario {
         this.cedula = cedula;
     }
 
-    public Integer getEdad() {
+    public int getEdad() {
         return edad;
     }
 

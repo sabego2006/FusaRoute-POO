@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class MainPrueba {
-Scanner teclado = new Scanner(System.in);
+    Scanner teclado = new Scanner(System.in);
 
-    static Integer validarCase(Integer opcionRuta) {
+    static int validarCase(int opcionRuta) {
         Scanner teclado = new Scanner(System.in);
         if (opcionRuta > 2 || opcionRuta <= 0) {
             while (opcionRuta > 2 || opcionRuta <= 0) {
@@ -32,7 +32,7 @@ Scanner teclado = new Scanner(System.in);
                 "3: Salir");
         System.out.println("----------------------------------------------------------------------");
         System.out.print("-->");
-        Integer opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
+        int opcionMenu= (int) Double.parseDouble(teclado.next().trim().replace(",","."));
 
         switch (opcionMenu){
             case 1:
@@ -40,9 +40,9 @@ Scanner teclado = new Scanner(System.in);
 
                 break;
             case 2:
-                 sistemaTransporte.registrarUsuario();
-                 sistemaTransporte.menuUsuario();
-                 sistemaTransporte.salirOnoSistema();
+                sistemaTransporte.registrarUsuario();
+                sistemaTransporte.menuUsuario();
+                sistemaTransporte.salirOnoSistema();
                 break;
             case 3:
                 break;

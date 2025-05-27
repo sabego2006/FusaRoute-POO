@@ -9,7 +9,7 @@ public class RutaChinauta extends RutaInterMunicipal{
         System.out.println(" Paraderos:" +getRutaInicio() + "-->" + getRutaFinal());
         System.out.println(" Tiempo Estimado de trayecto: 1 hora " +getTiempoEstimado());
         System.out.println(" Frucuencia estimada:" + getInformacion());
-        System.out.println(" Costo: $10.000"+getCosto());
+        System.out.println(" Costo: "+getCosto());
 
     }
 }

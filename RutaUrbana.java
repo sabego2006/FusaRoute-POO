@@ -24,6 +24,7 @@ public class RutaUrbana extends Ruta {
 
     public void nombreComunas() {
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
+        comunas.clear();
         comunas.add("Centro");
         comunas.add("Norte");
         comunas.add("Occidental");
@@ -41,20 +42,22 @@ public class RutaUrbana extends Ruta {
 
     public void nombreBarrioComunaCentro() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaCentro.clear();
         barriosComunaCentro.add("Potosi");
         barriosComunaCentro.add("luxemburgo");
         barriosComunaCentro.add("Galeria");
         for (int i = 0; i < barriosComunaCentro.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaCentro.get(i));
         }
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
         System.out.println("");
         System.out.print("-->");
+        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
 
     }
 
     public void nombreBarrioComunaNorte() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaNorte.clear();
         barriosComunaNorte.add("Gaitan");
         barriosComunaNorte.add("La Cabaña");
         barriosComunaNorte.add("El Eden");
@@ -64,13 +67,14 @@ public class RutaUrbana extends Ruta {
         for (int i = 0; i < barriosComunaNorte.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaNorte.get(i));
         }
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
         System.out.println("");
         System.out.print("-->");
+        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
     }
 
     public void nombreBarrioComunaOccidental() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaOccidental.clear();
         barriosComunaOccidental.add("San Mateo");
         barriosComunaOccidental.add("Manila");
         barriosComunaOccidental.add("convoy");
@@ -81,23 +85,35 @@ public class RutaUrbana extends Ruta {
         }
         System.out.println("");
         System.out.print("-->");
+        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
     }
 
     public void nombreBarriosComunaOriental() {
-        System.out.println("****Elija un barrio de esta Comuna: ****");
-        barriosComunaOriental.add("Pekin");
-        barriosComunaOriental.add("Coburgo");
-        barriosComunaOriental.add("Bonet");
-        barriosComunaOriental.add("Sauces");
-        for (int i = 0; i < barriosComunaOriental.size(); i++) {
-            System.out.println((i + 1) + ": " + barriosComunaOriental.get(i));
+        Integer opcionBarrio=0;
+        while (opcionBarrio < comunas.size()) {
+            System.out.println("****Elija un barrio de esta Comuna: ****");
+            barriosComunaOriental.clear();
+            barriosComunaOriental.add("Pekin");
+            barriosComunaOriental.add("Coburgo");
+            barriosComunaOriental.add("Bonet");
+            barriosComunaOriental.add("Sauces");
+            for (int i = 0; i < barriosComunaOriental.size(); i++) {
+                System.out.println((i + 1) + ": " + barriosComunaOriental.get(i));
+            }
+            System.out.println("");
+            System.out.print("-->");
+            opcionBarrio = (int) Double.parseDouble(teclado.next());
+            if (opcionBarrio>=5){
+                System.out.printf("numero invalido vuevelo a digitar: ");
+                opcionBarrio=(int) Double.parseDouble(teclado.next());
+            }
         }
-        System.out.println("");
-        System.out.print("-->");
+
     }
 
     public void nombreBarriosComunaSurOccidente() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaSurOccidental.clear();
         barriosComunaSurOccidental.add("llano largo");
         barriosComunaSurOccidental.add("La Pampa");
         barriosComunaSurOccidental.add("Coviproof");
@@ -109,12 +125,14 @@ public class RutaUrbana extends Ruta {
         for (int i = 0; i < barriosComunaSurOccidental.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaSurOccidental.get(i));
         }
+        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
         System.out.println("");
         System.out.print("-->");
     }
 
     public void nombreBarriosComunaSurOriente() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
+        barriosComunaSurOriental.clear();
         barriosComunaSurOriental.add("Balmoral");
         barriosComunaSurOriental.add("Fusacatan");
         barriosComunaSurOriental.add("La Macarena");
@@ -157,37 +175,31 @@ public class RutaUrbana extends Ruta {
         switch (opcionComuna) {
             case 1:
                  nombreBarrioComunaCentro();
-                RutaCentroTerminal rutaCentroTerminal = new RutaCentroTerminal();
-                rutaCentroTerminal.mostrarInfoRuta();
+//                RutaCentroTerminal rutaCentroTerminal = new RutaCentroTerminal();
+//                rutaCentroTerminal.mostrarInfoRuta();
 
                 break;
             case 2:
                 nombreBarrioComunaNorte();
-                RutaGranColombia rutaGranColombia = new RutaGranColombia();
-                rutaGranColombia.mostrarInfoRuta();
-
-                nombreBarrioComunaNorte();
-                RutaSanFernando rutaSanFernando = new RutaSanFernando();
-                rutaSanFernando.mostrarInfoRuta();
-
-
+//                RutaGranColombia rutaGranColombia = new RutaGranColombia();
+//                rutaGranColombia.mostrarInfoRuta();
                 break;
             case 3:
                 nombreBarrioComunaOccidental();
-                RutaEden rutaEden = new RutaEden();
-                rutaEden.mostrarInfoRuta();
+//                RutaEden rutaEden = new RutaEden();
+//                rutaEden.mostrarInfoRuta();
 
                 break;
             case 4:
                 nombreBarriosComunaOriental();
-                RutaSanFernando rutaSanFernando1 = new RutaSanFernando();
-                rutaSanFernando1.mostrarInfoRuta();
+//                RutaSanFernando rutaSanFernando1 = new RutaSanFernando();
+//                rutaSanFernando1.mostrarInfoRuta();
 
                 break;
             case 5:
                 nombreBarriosComunaSurOccidente();
-                RutaPampa rutaPampa = new RutaPampa();
-                rutaPampa.mostrarInfoRuta();
+//                RutaPampa rutaPampa = new RutaPampa();
+//                rutaPampa.mostrarInfoRuta();
 
                 break;
             case 6:

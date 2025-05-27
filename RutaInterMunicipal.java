@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RutaInterMunicipal extends Ruta{
+    ArrayList<String> rutasIntermunicipales = new ArrayList<>();
     public  RutaInterMunicipal(){
     }
 
@@ -12,6 +13,17 @@ public class RutaInterMunicipal extends Ruta{
     public void mostrarInfoRuta() {
     }
 
+
+    public void nombreRutasIntermunicipales(){
+        rutasIntermunicipales.add("Novillero");
+        rutasIntermunicipales.add("Pasca");
+        rutasIntermunicipales.add("Chinauta");
+        rutasIntermunicipales.add("Silvania");
+        rutasIntermunicipales.add("Arbelaez");
+        for (int i = 0; i < rutasIntermunicipales.size(); i++) {
+            System.out.println((i + 1) + ": " + rutasIntermunicipales.get(i));
+        }
+    }
 
     public static Integer validarCase(Integer opcionComuna) {
         Scanner teclado = new Scanner(System.in);
