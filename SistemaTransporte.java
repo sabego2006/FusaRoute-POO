@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// clase principal
+
 public class SistemaTransporte {
 
     Administrador administrador = new Administrador("Frank Ortegon","123",26,"udec");
@@ -14,19 +14,17 @@ public class SistemaTransporte {
     ArrayList<Integer> frecuenciaDestinos = new ArrayList<>();
     RutaUrbana rutaUrbana = new RutaUrbana();
     RutaInterMunicipal rutaInterMunicipal = new RutaInterMunicipal();
-    //Contructor vacio
+
+
     public SistemaTransporte() {
     }
 
     static Integer validarEdad(Integer edad){
         Scanner teclado = new Scanner(System.in);
         while(edad<=0 || edad>102 ){
-
                 System.out.print("Edad invalida. Ingresa de nuevo: ");
                 edad = (int) Double.parseDouble(teclado.next().replace(",","."));
-
         }
-
         return edad;
     }
 
@@ -135,12 +133,14 @@ public class SistemaTransporte {
         Integer opcion=0;
         while (opcionz!=2){
             Scanner teclado = new Scanner(System.in);
-            System.out.println("===== MENÚ ADMINISTRADOR =====");
-            System.out.println("1. Ver usuarios registrados");
-            System.out.println("2 Ver promedio de edades");
-            System.out.println("3. Ver estadísticas de rutas");
-            System.out.println("4. Salir Sesion");
-            System.out.print("->");
+            System.out.println("\n=========================================");
+            System.out.println("🛠️ PANEL DE ADMINISTRADOR - FUSAROUTE");
+            System.out.println("=========================================");
+            System.out.println("1️⃣  Ver usuarios registrados");
+            System.out.println("2️⃣  Ver promedio de edades");
+            System.out.println("3️⃣  Ver estadísticas de rutas");
+            System.out.println("4️⃣  Cerrar sesión");
+            System.out.print("👉 Opción: ");
             opcion =(int) Double.parseDouble(teclado.next().replace(",","."));
 
             switch (opcion) {
@@ -236,7 +236,6 @@ public class SistemaTransporte {
             case 2:
                 registrarUsuario();
                 menuUsuario();
-                salirOnoSistema(); // ir a menú general luego del registro
                 break;
             case 3:
                 System.out.println("👋 ¡Gracias por usar FusaRoute! Hasta pronto.");
@@ -291,11 +290,9 @@ public class SistemaTransporte {
             return;
         }
 
-        // Verifica si es un usuario registrado
         boolean usuarioEncontrado = false;
         for (Usuario u : usuarios) {
-            if (u.getCedula().equals(cedulaIngresada) &&
-                    u.getContraseña().equals(contraseñaIngresada)) {
+            if (u.getCedula().equals(cedulaIngresada) && u.getContraseña().equals(contraseñaIngresada)) {
 
                 System.out.println("👋 ¡Bienvenido/a " + u.getNombre() + "! Tu sesión ha sido iniciada correctamente.");
                 usuarioEncontrado = true;
@@ -358,20 +355,27 @@ public class SistemaTransporte {
 
     public void menuUsuario() {
         Scanner teclado = new Scanner(System.in);
-        //Usuario ultimo = usuarios.get(usuarios.size() - 1);
-        //System.out.println("¡Bienvenido/a " +  ultimo.getNombre() + "!");
-        System.out.println(" ");
-        System.out.println("1: Iniciar ruta 🚌 \n" +
-                "2: Salir sesión ❌ ");
+        System.out.println("\n=========================================");
+        System.out.println("👤 MENÚ DE USUARIO - FUSAROUTE");
+        System.out.println("=========================================");
+        System.out.println("¿Qué deseas hacer?");
+        System.out.println("1️⃣  Iniciar una ruta");
+        System.out.println("2️⃣  Cerrar sesión");
+        System.out.print("👉 Opción: ");
         Integer opcion= (int)Double.parseDouble(teclado.next().replace(",","."));
         switch (opcion){
             case 1:
                 escogerTipodeRuta();
+                salirOnoSistema();
                 break;
             case 2:
+                System.out.println("👋 ¡Sesión finalizada! Gracias por usar FusaRoute.");
                 break;
+            default:
+                System.out.println("❌ Opción inválida.");
+                menuUsuario();
         }
-
+        salirOnoSistema();
     }
 
     public void añadirDestinoFavorito() {

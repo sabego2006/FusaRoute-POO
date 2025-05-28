@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class MainPrueba {
-    Scanner teclado = new Scanner(System.in);
 
     static int validarCase(int opcionMenu) {
         Scanner teclado = new Scanner(System.in);
@@ -18,13 +17,13 @@ public class MainPrueba {
 
     public static void main(String[] args) {
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
-        Integer opcionSistema = 0;
         Scanner teclado = new Scanner(System.in);
 
 
-
-        System.out.println("¡BIENVENIDO A FUSAROUTE! \n A continuación lo llevaremos a nuestro menú ");
-        System.out.println("----------------------------------------------------------------------");
+        System.out.println("\n=========================================");
+        System.out.println("🚌 BIENVENIDO A FUSAROUTE 🚌 - 🍕 MENÚ PRINCIPAL");
+        System.out.println("=========================================");
+        System.out.println("Selecciona una opción:");
         System.out.println("1️⃣  Iniciar sesión");
         System.out.println("2️⃣  Registrar nuevo usuario");
         System.out.println("3️⃣  Salir del sistema");
@@ -39,14 +38,13 @@ public class MainPrueba {
             case 2:
                 sistemaTransporte.registrarUsuario();
                 sistemaTransporte.menuUsuario();
-                sistemaTransporte.salirOnoSistema();
                 break;
             case 3:
-                System.out.println("===================");
-                System.out.println("Gracias por usar FusaRoute 🌈🚎. ¡Vuelve pronto! ");
+                System.out.println("👋 ¡Gracias por usar FusaRoute! Hasta pronto.");
                 break;
             default:
-                System.out.println("numero invalido, vueva a intentarlo");
+                System.out.println("❌ Opción inválida. Intenta de nuevo.");
+                sistemaTransporte.menuInicio();
         }
     }
 }
