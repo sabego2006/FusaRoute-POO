@@ -65,7 +65,7 @@ public class RutaInterMunicipal extends Ruta{
                 rutaArbelaez.mostrarInfoRuta();
                 break;
             default:
-                System.out.println("opcion invalido, vuelvelo a intentarlo");
+                System.out.println("Opción invalida ❌. Intenta de nuevo.");
         }
 
     }

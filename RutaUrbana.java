@@ -20,92 +20,117 @@ public class RutaUrbana extends Ruta {
     public RutaUrbana(String nombre, String rutaInicio, String rutaFinal, String tiempoEstimado, String informacion, String costo) {
         super(nombre, rutaInicio, rutaFinal, tiempoEstimado, informacion, costo);
     }
-
+    public static Integer validarCase(Integer opcionComuna) {
+        Scanner teclado = new Scanner(System.in);
+        if (opcionComuna > 6 || opcionComuna <= 0) {
+            while (opcionComuna > 6 || opcionComuna <= 0) {
+                System.out.println("numero incorrecot, vuelelo a intentar");
+                opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+            }
+        }
+        return opcionComuna;
+    }
 
     public void nombreComunas() {
         System.out.println("*** Estan son las comunas urbanas de Fusagasuga ***");
         comunas.clear();
-        comunas.add("Centro");
-        comunas.add("Norte");
-        comunas.add("Occidental");
-        comunas.add("Oriental");
-        comunas.add("Sur Occidente");
-        comunas.add("Sur Oriente");
+        comunas.add("Centro: Potosí - Olaya ");
+        comunas.add("Norte: Villa Natalia - Gaitan.");
+        comunas.add("Occidental: San Mateo - Santa Anita.");
+        comunas.add("Oriental: Pekín - Sauces.");
+        comunas.add("Sur Occidente: Cooviprof - San Francisco.");
+        comunas.add("Sur Oriente: Balmoral - Camino Real.");
 
         for (int i = 0; i < comunas.size(); i++) {
             System.out.println((i + 1) + ": " + comunas.get(i));
         }
-        System.out.println("");
-        System.out.print("-->");
+        System.out.println("-->");
     }
 
 
     public void nombreBarrioComunaCentro() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaCentro.clear();
-        barriosComunaCentro.add("Potosi");
-        barriosComunaCentro.add("luxemburgo");
-        barriosComunaCentro.add("Galeria");
+        barriosComunaCentro.add("Potosí.");
+        barriosComunaCentro.add("Luxemburgo.");
+        barriosComunaCentro.add("Galeria.");
+        barriosComunaCentro.add("Olaya.");
         for (int i = 0; i < barriosComunaCentro.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaCentro.get(i));
         }
-        System.out.println("");
-        System.out.print("-->");
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaCentro.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaCentro.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
+            }
+        }
 
     }
 
     public void nombreBarrioComunaNorte() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaNorte.clear();
-        barriosComunaNorte.add("Gaitan");
-        barriosComunaNorte.add("La Cabaña");
-        barriosComunaNorte.add("El Eden");
-        barriosComunaNorte.add("Carlos Lleras");
-        barriosComunaNorte.add("Villa Natalia");
-        barriosComunaNorte.add("San Antonio");
+        barriosComunaNorte.add("Gaitan.");
+        barriosComunaNorte.add("La Cabaña.");
+        barriosComunaNorte.add("El Eden.");
+        barriosComunaNorte.add("Carlos Lleras.");
+        barriosComunaNorte.add("Villa Natalia.");
+        barriosComunaNorte.add("San Antonio.");
         for (int i = 0; i < barriosComunaNorte.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaNorte.get(i));
         }
         System.out.println("");
-        System.out.print("-->");
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaNorte.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaNorte.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
+            }
+        }
     }
 
     public void nombreBarrioComunaOccidental() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaOccidental.clear();
-        barriosComunaOccidental.add("San Mateo");
-        barriosComunaOccidental.add("Manila");
-        barriosComunaOccidental.add("convoy");
-        barriosComunaOccidental.add("Caney");
-        barriosComunaOccidental.add("Santa Anita");
+        barriosComunaOccidental.add("San Mateo.");
+        barriosComunaOccidental.add("Manila.");
+        barriosComunaOccidental.add("Convoy.");
+        barriosComunaOccidental.add("Caney.");
+        barriosComunaOccidental.add("Santa Anita.");
         for (int i = 0; i < barriosComunaOccidental.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaOccidental.get(i));
         }
         System.out.println("");
-        System.out.print("-->");
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaOccidental.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaOccidental.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
+            }
+        }
     }
 
     public void nombreBarriosComunaOriental() {
-        Integer opcionBarrio=0;
-        while (opcionBarrio < comunas.size()) {
             System.out.println("****Elija un barrio de esta Comuna: ****");
             barriosComunaOriental.clear();
-            barriosComunaOriental.add("Pekin");
-            barriosComunaOriental.add("Coburgo");
-            barriosComunaOriental.add("Bonet");
-            barriosComunaOriental.add("Sauces");
+            barriosComunaOriental.add("Pekin.");
+            barriosComunaOriental.add("Coburgo.");
+            barriosComunaOriental.add("Bonet.");
+            barriosComunaOriental.add("Sauces.");
             for (int i = 0; i < barriosComunaOriental.size(); i++) {
                 System.out.println((i + 1) + ": " + barriosComunaOriental.get(i));
             }
             System.out.println("");
-            System.out.print("-->");
-            opcionBarrio = (int) Double.parseDouble(teclado.next());
-            if (opcionBarrio>=5){
-                System.out.printf("numero invalido vuevelo a digitar: ");
-                opcionBarrio=(int) Double.parseDouble(teclado.next());
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaOriental.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaOriental.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
             }
         }
 
@@ -114,7 +139,7 @@ public class RutaUrbana extends Ruta {
     public void nombreBarriosComunaSurOccidente() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaSurOccidental.clear();
-        barriosComunaSurOccidental.add("llano largo");
+        barriosComunaSurOccidental.add("Llano largo");
         barriosComunaSurOccidental.add("La Pampa");
         barriosComunaSurOccidental.add("Coviproof");
         barriosComunaSurOccidental.add("Maiz Amarillo");
@@ -125,11 +150,16 @@ public class RutaUrbana extends Ruta {
         for (int i = 0; i < barriosComunaSurOccidental.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaSurOccidental.get(i));
         }
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
         System.out.println("");
-        System.out.print("-->");
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaSurOccidental.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaSurOccidental.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
+            }
+        }
     }
-
     public void nombreBarriosComunaSurOriente() {
         System.out.println("****Elija un barrio de esta Comuna: ****");
         barriosComunaSurOriental.clear();
@@ -142,23 +172,18 @@ public class RutaUrbana extends Ruta {
         for (int i = 0; i < barriosComunaSurOriental.size(); i++) {
             System.out.println((i + 1) + ": " + barriosComunaSurOriental.get(i));
         }
-        Integer opcionBarrio = (int) Double.parseDouble(teclado.next());
-        System.out.println("");
-        System.out.print("-->");
-
-    }
-
-    public static Integer validarCase(Integer opcionComuna) {
-        System.out.print("****Elija un barrio de esta Comuna: ****");
-        Scanner teclado = new Scanner(System.in);
-        if (opcionComuna >= 6 || opcionComuna <= 0) {
-            while (opcionComuna >= 6 || opcionComuna <= 0) {
-                System.out.println("numero incorrecot, vuelelo a intentar");
-                opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+        Integer opcionBarrio = -1;
+        while (opcionBarrio < 1 || opcionBarrio > barriosComunaSurOriental.size()) {
+            System.out.print("--> ");
+            opcionBarrio = (int) Double.parseDouble(teclado.next().replace(",", "."));
+            if (opcionBarrio < 1 || opcionBarrio > barriosComunaSurOriental.size()) {
+                System.out.println("❌ Opción inválida. Intente nuevamente.");
             }
         }
-        return opcionComuna;
+
     }
+
+
 
     public void mostrarInfoRuta() {
 
@@ -167,9 +192,9 @@ public class RutaUrbana extends Ruta {
     public void barrioComuna() {
         Scanner teclado = new Scanner(System.in);
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
-        System.out.println("Escoge unaa opcion: ");
+        System.out.print("Escoge una opcion: ");
         Integer opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
-        if (opcionComuna >= 6 || opcionComuna <= 0) {
+        if (opcionComuna > 6 || opcionComuna <= 0) {
             opcionComuna = validarCase(opcionComuna);
         }
         switch (opcionComuna) {
@@ -207,7 +232,7 @@ public class RutaUrbana extends Ruta {
 
                 break;
             default:
-                System.out.println("opcion invalido, vuelvelo a intentarlo");
+                System.out.println("Opción invalida ❌. Intenta de nuevo.");
         }
 
         }
