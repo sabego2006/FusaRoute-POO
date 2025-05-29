@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="Mejoras en la validaciones para que no se dañe el programa" />
+    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="cambios en lo visual del sistema">
+      <change beforePath="$PROJECT_DIR$/RutaUrbana.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaUrbana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaTransporte.java" afterDir="false" />
+    </list>
     <list id="95603a81-cc47-44e9-982c-f7c0fb11a453" name="Changes by PC" comment="" />
     <list id="b36e883e-2a98-4ff2-a093-28e2d056dbb4" name="Changes by Santiago" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +100,8 @@
       <workItem from="1748291508635" duration="6645000" />
       <workItem from="1748356320685" duration="18833000" />
       <workItem from="1748397142214" duration="7152000" />
-      <workItem from="1748451008517" duration="350000" />
+      <workItem from="1748451008517" duration="4004000" />
+      <workItem from="1748486995479" duration="1144000" />
     </task>
     <task id="LOCAL-00001" summary="creacion de clase administrador">
       <option name="closed" value="true" />
@@ -291,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748406072299</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cambios en lo visual del sistema">
+      <option name="closed" value="true" />
+      <created>1748455056184</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1748455056184</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +329,8 @@
     <MESSAGE value="varios cambios de Administrador" />
     <MESSAGE value="cambios en el sistemaa" />
     <MESSAGE value="Mejoras en la validaciones para que no se dañe el programa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejoras en la validaciones para que no se dañe el programa" />
+    <MESSAGE value="cambios en lo visual del sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios en lo visual del sistema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -329,13 +342,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/SistemaTransporte.java</url>
-          <line>267</line>
+          <line>241</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RutaUrbana.java</url>
           <line>170</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RutaUrbana.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NumberFormatException" package="java.lang" />

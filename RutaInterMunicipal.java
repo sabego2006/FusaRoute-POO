@@ -10,6 +10,7 @@ public class RutaInterMunicipal extends Ruta{
         super(nombre, rutaInicio, rutaFinal, tiempoEstimado, informacion, costo);
     }
 
+
     public void mostrarInfoRuta() {
     }
 
@@ -38,6 +39,7 @@ public class RutaInterMunicipal extends Ruta{
 
     public void mostrarInforRutasIntermunicipal() {
         Scanner teclado = new Scanner(System.in);
+        SistemaTransporte sistemaTransporte = new SistemaTransporte();
         System.out.println("Escoge una opcion: ");
         Integer opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
         if (opcionComuna > 6 || opcionComuna <= 0) {
@@ -45,27 +47,23 @@ public class RutaInterMunicipal extends Ruta{
         }
         switch (opcionComuna) {
             case 1:
-                RutaNovillero rutaNovillero = new RutaNovillero();
-                rutaNovillero.mostrarInfoRuta();
+                sistemaTransporte.mostrarRutaInterMunicipal(opcionComuna);
                 break;
             case 2:
-                RutaPasca rutaPasca = new RutaPasca();
-                rutaPasca.mostrarInfoRuta();
+                sistemaTransporte.mostrarRutaInterMunicipal(opcionComuna);
                 break;
             case 3:
-                RutaChinauta rutaChinauta = new RutaChinauta();
-                rutaChinauta.mostrarInfoRuta();
+                sistemaTransporte.mostrarRutaInterMunicipal(opcionComuna);
                 break;
             case 4:
-                RutaSilvania rutaSilvania = new RutaSilvania();
-                rutaSilvania.mostrarInfoRuta();
+                sistemaTransporte.mostrarRutaInterMunicipal(opcionComuna);
                 break;
             case 5:
-                RutaArbelaez rutaArbelaez = new RutaArbelaez();
-                rutaArbelaez.mostrarInfoRuta();
+                sistemaTransporte.mostrarRutaInterMunicipal(opcionComuna);
                 break;
             default:
                 System.out.println("Opción invalida ❌. Intenta de nuevo.");
+                mostrarInforRutasIntermunicipal();
         }
 
     }

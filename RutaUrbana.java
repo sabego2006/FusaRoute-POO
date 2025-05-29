@@ -189,7 +189,7 @@ public class RutaUrbana extends Ruta {
 
     }
 
-    public void barrioComuna() {
+    public void barrioComunaInicioSesion() {
         Scanner teclado = new Scanner(System.in);
         SistemaTransporte sistemaTransporte = new SistemaTransporte();
         System.out.print("Escoge una opcion: ");
@@ -200,42 +200,71 @@ public class RutaUrbana extends Ruta {
         switch (opcionComuna) {
             case 1:
                  nombreBarrioComunaCentro();
-//                RutaCentroTerminal rutaCentroTerminal = new RutaCentroTerminal();
-//                rutaCentroTerminal.mostrarInfoRuta();
 
                 break;
             case 2:
                 nombreBarrioComunaNorte();
-//                RutaGranColombia rutaGranColombia = new RutaGranColombia();
-//                rutaGranColombia.mostrarInfoRuta();
                 break;
             case 3:
                 nombreBarrioComunaOccidental();
-//                RutaEden rutaEden = new RutaEden();
-//                rutaEden.mostrarInfoRuta();
 
                 break;
             case 4:
                 nombreBarriosComunaOriental();
-//                RutaSanFernando rutaSanFernando1 = new RutaSanFernando();
-//                rutaSanFernando1.mostrarInfoRuta();
 
                 break;
             case 5:
                 nombreBarriosComunaSurOccidente();
-//                RutaPampa rutaPampa = new RutaPampa();
-//                rutaPampa.mostrarInfoRuta();
 
                 break;
             case 6:
                 nombreBarriosComunaSurOriente();
+                break;
+            default:
+                System.out.println("Opción invalida ❌. Intenta de nuevo.");
+                barrioComunaInicioSesion();
+        }
 
+        }
+    public void barrioComuna() {
+        Scanner teclado = new Scanner(System.in);
+        SistemaTransporte sistemaTransporte = new SistemaTransporte();
+        System.out.print("Escoge una opcion: ");
+        Integer opcionComuna = (int) Double.parseDouble(teclado.next().trim().replace(",", "."));
+        if (opcionComuna > 6 || opcionComuna <= 0) {
+            opcionComuna = validarCase(opcionComuna);
+        }
+        switch (opcionComuna) {
+            case 1:
+                nombreBarrioComunaCentro();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
+
+                break;
+            case 2:
+                nombreBarrioComunaNorte();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
+                break;
+            case 3:
+                nombreBarrioComunaOccidental();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
+                break;
+            case 4:
+                nombreBarriosComunaOriental();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
+                break;
+            case 5:
+                nombreBarriosComunaSurOccidente();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
+                break;
+            case 6:
+                nombreBarriosComunaSurOriente();
+                sistemaTransporte.mostrarRutaPorComuna(opcionComuna);
                 break;
             default:
                 System.out.println("Opción invalida ❌. Intenta de nuevo.");
         }
 
-        }
+    }
 
 
     }

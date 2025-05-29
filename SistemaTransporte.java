@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class SistemaTransporte {
 
-    Administrador administrador = new Administrador("Frank Ortegon","123",26,"udec");
-    Usuario usuario = new Usuario();
+    Administrador administrador = new Administrador("Frank Ortegon", "123", 26, "udec");
     Scanner teclado = new Scanner(System.in);
     ArrayList<Usuario> usuarios = new ArrayList<>();
     ArrayList<RutaUrbana> rutasUrbanas;
@@ -19,11 +18,11 @@ public class SistemaTransporte {
     public SistemaTransporte() {
     }
 
-    static Integer validarEdad(Integer edad){
+    static Integer validarEdad(Integer edad) {
         Scanner teclado = new Scanner(System.in);
-        while(edad<=0 || edad>102 ){
-                System.out.print("Edad invalida. Ingresa de nuevo: ");
-                edad = (int) Double.parseDouble(teclado.next().replace(",","."));
+        while (edad <= 0 || edad > 102) {
+            System.out.print("Edad invalida. Ingresa de nuevo: ");
+            edad = (int) Double.parseDouble(teclado.next().replace(",", "."));
         }
         return edad;
     }
@@ -54,12 +53,11 @@ public class SistemaTransporte {
     }
 
     public void mostrarDestinosConFrecuencia() {
-        if (usuarios.isEmpty()){
+        if (usuarios.isEmpty()) {
             System.out.println("no hay ususarios registrados");
-        }
-        else {
+        } else {
             for (Usuario us : usuarios) {
-                System.out.println("=== Destinos frecuentes de " +  us.getNombre() + " ===");
+                System.out.println("=== Destinos frecuentes de " + us.getNombre() + " ===");
             }
             for (int i = 0; i < destinosFrecuentes.size(); i++) {
                 System.out.println(destinosFrecuentes.get(i) + " → Veces: " + frecuenciaDestinos.get(i));
@@ -67,7 +65,6 @@ public class SistemaTransporte {
         }
 
     }
-
 
 
 //    public void inicializarRutasInterMunicipales() {
@@ -85,12 +82,44 @@ public class SistemaTransporte {
         rutasUrbanas.add(new RutaSanFernando());
         rutasUrbanas.add(new RutaStaMariaLosAngeles());
     }
+
     public void inicializarRutas() {
         inicializarRutasUrbanas();
         //inicializarRutasInterMunicipales();
     }
 
 
+    public void mostrarRutaInterMunicipal(int opcionRuta) {
+        RutaInterMunicipal ri = new RutaInterMunicipal();
+        switch (opcionRuta) {
+            case 1:
+                ri = new RutaNovillero();
+                agregarDestino("RutaNovillero");
+                break;
+            case 2:
+                ri = new RutaPasca();;
+                agregarDestino("RutaPasca");
+                break;
+            case 3:
+                ri = new RutaChinauta();
+                agregarDestino("RutaGranColombia");
+                break;
+            case 4:
+                ri = new RutaSilvania();
+                agregarDestino("RutaSilvania");
+                break;
+            case 5:
+                ri = new RutaArbelaez();
+                agregarDestino("RutaArbelaez");
+                break;
+            default:
+                System.out.println("Comuna inválida.");
+                return;
+        }
+
+        System.out.println("\n=== Ruta recomendada para esta comuna ===");
+        ri.mostrarInfoRuta();
+    }
 
     public void mostrarRutaPorComuna(int opcionComuna) {
         RutaUrbana ruta = new RutaUrbana();
@@ -128,10 +157,11 @@ public class SistemaTransporte {
         ruta.mostrarInfoRuta();
     }
 
+
     public void menuAdmin() {
-        Integer opcionz=0;
-        Integer opcion=0;
-        while (opcionz!=2){
+        Integer opcionz = 0;
+        Integer opcion = 0;
+        while (opcionz != 2) {
             Scanner teclado = new Scanner(System.in);
             System.out.println("\n=========================================");
             System.out.println("🛠️ PANEL DE ADMINISTRADOR - FUSAROUTE");
@@ -141,7 +171,7 @@ public class SistemaTransporte {
             System.out.println("3️⃣  Ver estadísticas de rutas");
             System.out.println("4️⃣  Cerrar sesión");
             System.out.print("👉 Opción: ");
-            opcion =(int) Double.parseDouble(teclado.next().replace(",","."));
+            opcion = (int) Double.parseDouble(teclado.next().replace(",", "."));
 
             switch (opcion) {
                 case 1:
@@ -162,36 +192,13 @@ public class SistemaTransporte {
             }
             System.out.println("desea realizar otra opcion? \n 1: si " +
                     "\n 2: no");
-            opcionz = (int) Double.parseDouble(teclado.next().replace(",","."));
+            opcionz = (int) Double.parseDouble(teclado.next().replace(",", "."));
 
         }
         salirOnoSistema();
 
     }
 
-    public void menuMostrarRutaIntermunicipal() {
-
-//        if (rutasInterMunicipales.isEmpty()) {
-//            System.out.println("No hay rutas intermunicipales registradas.");
-//            return;
-//        }
-
-        System.out.println("=== RUTAS INTERMUNICIPALES ===");
-        for (int i = 0; i < rutasInterMunicipales.size(); i++) {
-            System.out.println((i+1) + ". " + rutasInterMunicipales.get(i).getNombre());
-        }
-//
-//        System.out.print("Seleccione una ruta: ");
-//        int opcion = teclado.nextInt();
-//        teclado.nextLine();
-//
-//        if (opcion >= 0 && opcion < rutasInterMunicipales.size()) {
-//            RutaInterMunicipal ruta = rutasInterMunicipales.get(opcion);
-//            ruta.mostrarInfoRuta(); // 🔥 POLIMORFISMO aquí
-//        } else {
-//            System.out.println("Opción inválida.");
-//        }
-    }
 
 
 
@@ -207,7 +214,7 @@ public class SistemaTransporte {
             case 1:
                 rutaUrbana.nombreComunas();
                 rutaUrbana.barrioComuna();
-                mostrarRutaPorComuna(opcionRuta);
+//                mostrarRutaPorComuna(opcionRuta);
                 break;
             case 2:
                 rutaInterMunicipal.nombreRutasIntermunicipales();
@@ -257,15 +264,15 @@ public class SistemaTransporte {
         System.out.print("Ingrese su documento de identidad: ");
         usuario.setCedula(teclado.next());
         System.out.print("Ingrese su edad: ");
-        usuario.setEdad((int)Double.parseDouble(teclado.next().replace(",",".")));
+        usuario.setEdad((int) Double.parseDouble(teclado.next().replace(",", ".")));
         Integer edad = usuario.getEdad();
-        edad=validarEdad(edad);
+        edad = validarEdad(edad);
         usuario.setEdad(edad);
         System.out.print("Ingrese una contraseña: ");
         usuario.setContraseña(teclado.next());
         System.out.println("Ingresa tu barrio de residencia: ");
         rutaUrbana.nombreComunas();
-        rutaUrbana.barrioComuna();
+        rutaUrbana.barrioComunaInicioSesion();
         usuarios.add(usuario);
     }
 
@@ -309,37 +316,34 @@ public class SistemaTransporte {
     }
 
 
-
-
     public void salirOnoSistema() {
         Integer opcionSistema = 0;
 
-            System.out.println(" ");
-            System.out.println("¿Desea salir del sistema? \n" +
-                    "1: NO ❌ \n" +
-                    "2: SI ✅ ");
-            opcionSistema = (int) Double.parseDouble(teclado.next().replace(",", "."));
-            switch (opcionSistema) {
-                case 1:
-                    menuInicio();
-                    break;
-                case 2:
-                    System.out.println("===================");
-                    System.out.println("Gracias por usar FusaRoute 🌈🚎. ¡Vuelve pronto! ");
-                    break;
-            }
+        System.out.println(" ");
+        System.out.println("¿Desea salir del sistema? \n" +
+                "1: NO ❌ \n" +
+                "2: SI ✅ ");
+        opcionSistema = (int) Double.parseDouble(teclado.next().replace(",", "."));
+        switch (opcionSistema) {
+            case 1:
+                menuInicio();
+                break;
+            case 2:
+                System.out.println("===================");
+                System.out.println("Gracias por usar FusaRoute 🌈🚎. ¡Vuelve pronto! ");
+                break;
+        }
     }
 
     public void mostrarUsuario() {
         Integer cantUsuarios = usuarios.size();
-        if (cantUsuarios>0) {
+        if (cantUsuarios > 0) {
             System.out.println("Hay un total de " + usuarios.size() + " usuarios reigstrados ");
             System.out.println("Lista de usuarios registrados:");
             for (Usuario us : usuarios) {
                 System.out.println(" Nombre: " + us.getNombre() + ", Cédula: " + us.getCedula() + ", Edad: " + us.getEdad());
             }
-        }
-        else {
+        } else {
             System.out.println("no hay usuarios registrados");
         }
     }
@@ -362,20 +366,20 @@ public class SistemaTransporte {
         System.out.println("1️⃣  Iniciar una ruta");
         System.out.println("2️⃣  Cerrar sesión");
         System.out.print("👉 Opción: ");
-        Integer opcion= (int)Double.parseDouble(teclado.next().replace(",","."));
-        switch (opcion){
+        Integer opcion = (int) Double.parseDouble(teclado.next().replace(",", "."));
+        switch (opcion) {
             case 1:
                 escogerTipodeRuta();
                 salirOnoSistema();
                 break;
             case 2:
                 System.out.println("👋 ¡Sesión finalizada! Gracias por usar FusaRoute.");
+                salirOnoSistema();
                 break;
             default:
                 System.out.println("❌ Opción inválida.");
                 menuUsuario();
         }
-        salirOnoSistema();
     }
 
     public void añadirDestinoFavorito() {
@@ -393,21 +397,19 @@ public class SistemaTransporte {
     }
 
     public void promedioEdad() {
-        Integer edad=0;
-        Double promedio=(double)usuarios.size();
-        if (promedio>0) {
+        Integer edad = 0;
+        Double promedio = (double) usuarios.size();
+        if (promedio > 0) {
             for (Usuario us : usuarios) {
-                edad+= us.getEdad();
+                edad += us.getEdad();
             }
-            promedio =(double)edad/usuarios.size();
-            System.out.println("el promedio de edades de los usuarios es "+promedio);
-        }
-        else {
+            promedio = (double) edad / usuarios.size();
+            System.out.println("el promedio de edades de los usuarios es " + promedio);
+        } else {
             System.out.println("no hay usuarios registrados");
         }
 
     }
-
 
     public void agregarCalificacion() {
 
