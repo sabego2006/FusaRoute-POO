@@ -9,29 +9,40 @@ public class Usuario {
     Integer edad;
     String contraseña;
     String barrioDeResidencia;
-    ArrayList<String> destinosFrecuentes;
+
+    String destinosFrecuentes;
+
+
+
+    public void agregarDestinoFrecuente(String destino) {
+        if (destinosFrecuentes == null) {
+//            destinosFrecuentes = new ArrayList<>();
+        }
+//        destinosFrecuentes.add(destino);
+    }
+
 
     //Constructores
     public Usuario() {
     }
 
 
-    public Usuario(String nombre, String cedula, Integer edad, String contraseña, ArrayList<String> destinosFrecuentes) {
+    public Usuario(String nombre, String cedula, Integer edad, String contraseña, String destinosFrecuentes) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.destinosFrecuentes = destinosFrecuentes;
         this.contraseña=contraseña;
     }
-    //Metodos
-//    public void seleccionarDestino(String[] destinos, Integer indice){
-//    if (indice >= 0 && indice < destinos.length) {
-//        String destino = destinos[indice];
-//        if (!destinosFrecuentes.contains(destino)) {
-//        }
-//    }
-//
-//    }
+
+    public void seleccionarDestino(String[] destinos, Integer indice){
+    if (indice >= 0 && indice < destinos.length) {
+        String destino = destinos[indice];
+        if (!destinosFrecuentes.contains(destino)) {
+        }
+    }
+
+    }
     public void mostrarInfo(){
         System.out.println("***** INFORMACIÓN USUARIO *****");
         System.out.println("Nombre: " + Usuario.this.nombre);
@@ -65,13 +76,13 @@ public class Usuario {
         this.edad = edad;
     }
 
-    public ArrayList<String> getDestinosFrecuentes() {
-        return destinosFrecuentes;
-    }
+//    public ArrayList<String> getDestinosFrecuentes() {
+//        return destinosFrecuentes;
+//    }
 
-    public void setDestinosFrecuentes(ArrayList<String> destinosFrecuentes) {
-        this.destinosFrecuentes = destinosFrecuentes;
-    }
+//    public void setDestinosFrecuentes(ArrayList<String> destinosFrecuentes) {
+//        this.destinosFrecuentes = destinosFrecuentes;
+//    }
     public String getContraseña() {
         return contraseña;
     }

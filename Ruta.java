@@ -22,10 +22,7 @@ public abstract class  Ruta {
         this.costo = costo;
     }
 
-    public void agregarCalificacion(){
-    }
-    public void promedioCalificaciones(){
-    }
+
     public void mostarInfoRuta(){
     }
 

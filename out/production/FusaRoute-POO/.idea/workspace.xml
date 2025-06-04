@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="cambios en lo visual del sistema">
-      <change beforePath="$PROJECT_DIR$/RutaUrbana.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutaUrbana.java" afterDir="false" />
+    <list default="true" id="1a011166-2c79-434f-8966-6ef611b7a58e" name="Changes" comment="cambios en la logica del sistema, añadir destino en ruta intermunicipal,">
+      <change beforePath="$PROJECT_DIR$/FusaRouteMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/FusaRouteMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ruta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ruta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SistemaTransporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaTransporte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/FusaRouteMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/FusaRouteMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/Ruta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/Ruta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaInterMunicipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaInterMunicipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaUrbana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/RutaUrbana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/SistemaTransporte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/SistemaTransporte.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FusaRoute-POO/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FusaRoute-POO/Usuario.class" afterDir="false" />
     </list>
     <list id="95603a81-cc47-44e9-982c-f7c0fb11a453" name="Changes by PC" comment="" />
     <list id="b36e883e-2a98-4ff2-a093-28e2d056dbb4" name="Changes by Santiago" comment="" />
@@ -101,7 +110,10 @@
       <workItem from="1748356320685" duration="18833000" />
       <workItem from="1748397142214" duration="7152000" />
       <workItem from="1748451008517" duration="4004000" />
-      <workItem from="1748486995479" duration="1144000" />
+      <workItem from="1748486995479" duration="2927000" />
+      <workItem from="1748541730203" duration="1769000" />
+      <workItem from="1748998097871" duration="7601000" />
+      <workItem from="1749040550231" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="creacion de clase administrador">
       <option name="closed" value="true" />
@@ -303,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748455056184</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="cambios en la logica del sistema, añadir destino en ruta intermunicipal,">
+      <option name="closed" value="true" />
+      <created>1748489945849</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1748489945849</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +350,8 @@
     <MESSAGE value="cambios en el sistemaa" />
     <MESSAGE value="Mejoras en la validaciones para que no se dañe el programa" />
     <MESSAGE value="cambios en lo visual del sistema" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios en lo visual del sistema" />
+    <MESSAGE value="cambios en la logica del sistema, añadir destino en ruta intermunicipal," />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios en la logica del sistema, añadir destino en ruta intermunicipal," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -339,11 +360,6 @@
           <url>file://$PROJECT_DIR$/FusaRouteMain.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SistemaTransporte.java</url>
-          <line>241</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RutaUrbana.java</url>

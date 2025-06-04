@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class SistemaTransporte {
 
     Administrador administrador = new Administrador("Frank Ortegon", "123", 26, "udec");
+    Usuario usuario = new Usuario("Julian","123",26,"jj","RutaCentro");
     Scanner teclado = new Scanner(System.in);
     ArrayList<Usuario> usuarios = new ArrayList<>();
     ArrayList<RutaUrbana> rutasUrbanas;
@@ -13,6 +14,7 @@ public class SistemaTransporte {
     ArrayList<Integer> frecuenciaDestinos = new ArrayList<>();
     RutaUrbana rutaUrbana = new RutaUrbana();
     RutaInterMunicipal rutaInterMunicipal = new RutaInterMunicipal();
+
 
 
     public SistemaTransporte() {
@@ -25,6 +27,14 @@ public class SistemaTransporte {
             edad = (int) Double.parseDouble(teclado.next().replace(",", "."));
         }
         return edad;
+    }
+    static String validarCC(String cedula ){
+       Scanner teclado = new Scanner(System.in);
+        while (cedula.length()<9 || cedula.length() >10){
+            System.out.println("numero invalido de documento. vuevelo a intentar");
+            cedula=teclado.next().replace(",", "").replace(".","");
+        }
+        return cedula;
     }
 
     static Integer validarCase(Integer opcionRuta) {
@@ -40,6 +50,12 @@ public class SistemaTransporte {
 
     //Métodos:
     public void agregarDestino(String destino) {
+        Usuario usuario = new Usuario();
+        if (destino == null || destino.isEmpty()) {
+            System.out.println("Destino inválido.");
+            return;
+        }
+
         if (destinosFrecuentes.contains(destino)) {
             int index = destinosFrecuentes.indexOf(destino);
             int frecuenciaActual = frecuenciaDestinos.get(index);
@@ -49,21 +65,24 @@ public class SistemaTransporte {
             frecuenciaDestinos.add(1);
         }
 
+        if (usuario != null) {
+            usuario.agregarDestinoFrecuente(destino);
+        }
+
         System.out.println("Destino registrado: " + destino);
     }
 
     public void mostrarDestinosConFrecuencia() {
         if (usuarios.isEmpty()) {
-            System.out.println("no hay ususarios registrados");
+            System.out.println("No hay usuarios registrados.");
         } else {
             for (Usuario us : usuarios) {
                 System.out.println("=== Destinos frecuentes de " + us.getNombre() + " ===");
-            }
-            for (int i = 0; i < destinosFrecuentes.size(); i++) {
-                System.out.println(destinosFrecuentes.get(i) + " → Veces: " + frecuenciaDestinos.get(i));
+                for (int i = 0; i < destinosFrecuentes.size(); i++) {
+                    System.out.println(destinosFrecuentes.get(i) + " → Veces: " + frecuenciaDestinos.get(i));
+                }
             }
         }
-
     }
 
 
@@ -74,19 +93,6 @@ public class SistemaTransporte {
 //        rutasInterMunicipales.add(new RutaSilvania());
 //        rutasInterMunicipales.add(new RutaArbelaez());
 //    }
-
-    public void inicializarRutasUrbanas() {
-        rutasUrbanas.add(new RutaCentroTerminal());
-        rutasUrbanas.add(new RutaGranColombia());
-        rutasUrbanas.add(new RutaPampa());
-        rutasUrbanas.add(new RutaSanFernando());
-        rutasUrbanas.add(new RutaStaMariaLosAngeles());
-    }
-
-    public void inicializarRutas() {
-        inicializarRutasUrbanas();
-        //inicializarRutasInterMunicipales();
-    }
 
 
     public void mostrarRutaInterMunicipal(int opcionRuta) {
@@ -141,8 +147,8 @@ public class SistemaTransporte {
                 agregarDestino("RutaStaMariaLosAngeles");
                 break;
             case 5:
-                ruta = new RutaPampa();
-                agregarDestino("RutaPampa");
+                ruta = new RutaEden();
+                agregarDestino("RutaEden");
                 break;
             case 6:
                 ruta = new RutaSanFernando();
@@ -258,11 +264,16 @@ public class SistemaTransporte {
         Scanner teclado = new Scanner(System.in);
         Usuario usuario = new Usuario();
 
-        System.out.println("=====Vamos a registrar su usuario=====");
+        System.out.println("\n============================");
+        System.out.println("👤 REGISTRO DE USUARIO 👤");
+        System.out.println("============================");
         System.out.print("Ingrese su nombre: ");
         usuario.setNombre(teclado.nextLine());
         System.out.print("Ingrese su documento de identidad: ");
-        usuario.setCedula(teclado.next());
+        usuario.setCedula(teclado.next().replace(",", "").replace(".",""));
+        String cedula = usuario.getCedula();
+        cedula =validarCC(cedula);
+        usuario.setCedula(cedula);
         System.out.print("Ingrese su edad: ");
         usuario.setEdad((int) Double.parseDouble(teclado.next().replace(",", ".")));
         Integer edad = usuario.getEdad();
@@ -274,6 +285,7 @@ public class SistemaTransporte {
         rutaUrbana.nombreComunas();
         rutaUrbana.barrioComunaInicioSesion();
         usuarios.add(usuario);
+
     }
 
     public void iniciarSesionUsuario() {
@@ -311,7 +323,7 @@ public class SistemaTransporte {
         if (!usuarioEncontrado) {
             System.out.println("❌ Los datos ingresados no son válidos. Verifica tu cédula o contraseña.");
             System.out.println("🔁 Regresando al menú principal...\n");
-            salirOnoSistema(); // opción de salir o volver al inicio
+            salirOnoSistema();
         }
     }
 
@@ -336,6 +348,11 @@ public class SistemaTransporte {
     }
 
     public void mostrarUsuario() {
+        usuarios.add(new Usuario("Julian","1030524888",21,"jj","RutaCentro"));
+        usuarios.add(new Usuario("angelica","1070464459",20,"jj","RutaCentro"));
+        usuarios.add(new Usuario("Santiago","1070464884",19,"jj","RutaCentro"));
+        usuarios.add(new Usuario("Brayan","1069726892",18,"jj","RutaCentro"));
+
         Integer cantUsuarios = usuarios.size();
         if (cantUsuarios > 0) {
             System.out.println("Hay un total de " + usuarios.size() + " usuarios reigstrados ");
@@ -343,6 +360,7 @@ public class SistemaTransporte {
             for (Usuario us : usuarios) {
                 System.out.println(" Nombre: " + us.getNombre() + ", Cédula: " + us.getCedula() + ", Edad: " + us.getEdad());
             }
+
         } else {
             System.out.println("no hay usuarios registrados");
         }
@@ -382,20 +400,6 @@ public class SistemaTransporte {
         }
     }
 
-    public void añadirDestinoFavorito() {
-
-
-    }
-
-    public void mostrarDestinosUsarios() {
-
-    }
-
-    public void barriosMasVisitado() {
-
-
-    }
-
     public void promedioEdad() {
         Integer edad = 0;
         Double promedio = (double) usuarios.size();
@@ -411,12 +415,6 @@ public class SistemaTransporte {
 
     }
 
-    public void agregarCalificacion() {
 
-    }
-
-    public void rutaMejorCalificada() {
-
-    }
 
 }
